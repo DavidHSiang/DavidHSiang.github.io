@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Spring整合Junit/Spring整合Junit | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Spring整合Junit 一. 导入相关依赖(1) junit依赖123456&lt;dependency&gt;  &lt;groupId&gt;junit&lt;&#x2F;groupId&gt;  &lt;artifactId&gt;junit&lt;&#x2F;artifactId&gt;  &lt;version&gt;4.12&lt;&#x2F;version&gt;  &lt;scope&gt;test&lt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spring整合Junit&#x2F;Spring整合Junit">
+<meta property="og:url" content="http://yoursite.com/2020/04/07/Spring%E6%95%B4%E5%90%88Junit/Spring%E6%95%B4%E5%90%88Junit/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Spring整合Junit 一. 导入相关依赖(1) junit依赖123456&lt;dependency&gt;  &lt;groupId&gt;junit&lt;&#x2F;groupId&gt;  &lt;artifactId&gt;junit&lt;&#x2F;artifactId&gt;  &lt;version&gt;4.12&lt;&#x2F;version&gt;  &lt;scope&gt;test&lt;">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/04/07/Spring%E6%95%B4%E5%90%88Junit/Spring%E6%95%B4%E5%90%88Junit/.img/Spring%E6%95%B4%E5%90%88Junit%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98.png">
+<meta property="article:published_time" content="2020-04-07T12:09:49.355Z">
+<meta property="article:modified_time" content="2020-04-02T08:23:15.748Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/07/Spring%E6%95%B4%E5%90%88Junit/Spring%E6%95%B4%E5%90%88Junit/.img/Spring%E6%95%B4%E5%90%88Junit%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Spring整合Junit/Spring整合Junit" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/07/Spring%E6%95%B4%E5%90%88Junit/Spring%E6%95%B4%E5%90%88Junit/" class="article-date">
+  <time datetime="2020-04-07T12:09:49.355Z" itemprop="datePublished">2020-04-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Spring整合Junit/Spring整合Junit
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Spring整合Junit"><a href="#Spring整合Junit" class="headerlink" title="Spring整合Junit"></a>Spring整合Junit</h1><hr>
+<h2 id="一-导入相关依赖"><a href="#一-导入相关依赖" class="headerlink" title="一. 导入相关依赖"></a>一. 导入相关依赖</h2><h3 id="1-junit依赖"><a href="#1-junit依赖" class="headerlink" title="(1) junit依赖"></a>(1) junit依赖</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>注:Spring 5.x 版本整合Junit时,<strong>Junit的版本要求必须在4.12及以上</strong>,否则会报错</p>
+<p><img src="./.img/Spring%E6%95%B4%E5%90%88Junit%E7%89%88%E6%9C%AC%E9%97%AE%E9%A2%98.png" alt="Spring整合Junit版本问题"></p>
+<h3 id="2-spring-test"><a href="#2-spring-test" class="headerlink" title="(2)spring-test"></a>(2)spring-test</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--Spring-test--&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-test<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.0.2.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="二-添加注解"><a href="#二-添加注解" class="headerlink" title="二. 添加注解"></a>二. 添加注解</h2><p>在测试类添加注解:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">	* RunWith注解:</span></span><br><span class="line"><span class="comment">	* 作用: 把原有的main方法替换成spring提供的main方法</span></span><br><span class="line"><span class="comment">	* 写法固定</span></span><br><span class="line"><span class="comment">	*/</span></span><br><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">/**</span></span><br><span class="line">   * ContextConfiguration注解:</span><br><span class="line">   * locations属性: 用于指定Spring配置文件的路径</span><br><span class="line">   * classes属性: 用于指定注解类所在地的路径</span><br><span class="line">   */</span><br><span class="line"><span class="meta">@ContextConfiguration</span>(locations = &#123;<span class="string">"classpath:applicationContext.xml"</span>&#125;)</span><br><span class="line"><span class="comment">// 注解类写法:</span></span><br><span class="line"><span class="comment">//@ContextConfiguration(classes = SpringConfiguration.class)</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MapperTest</span> </span>&#123;</span><br><span class="line">	<span class="comment">//实现自动依赖注入</span></span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> DepartmentMapper departmentMapper;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testCRUD</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">//使用依赖注入的对象</span></span><br><span class="line">        System.out.println(departmentMapper);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="三-示例代码"><a href="#三-示例代码" class="headerlink" title="三.示例代码"></a>三.示例代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">@<span class="title">ContextConfiguration</span>(<span class="title">locations</span> </span>= &#123;<span class="string">"classpath:applicationContext.xml"</span>&#125;)</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MapperTest</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Autowired</span></span><br><span class="line">    <span class="keyword">private</span> DepartmentMapper departmentMapper;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testCRUD</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(departmentMapper);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/04/07/Spring%E6%95%B4%E5%90%88Junit/Spring%E6%95%B4%E5%90%88Junit/" data-id="ck8pv39xh0002ddyd1if310lm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">我的第一篇博客文章</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/07/Spring%E6%95%B4%E5%90%88Junit/Spring%E6%95%B4%E5%90%88Junit/">Spring整合Junit/Spring整合Junit</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/07/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/07/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
