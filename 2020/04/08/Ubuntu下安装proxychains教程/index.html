@@ -6,40 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://davidhsiang.github.io">
-  <title>Tag: Spring | DavidHSiang的博客</title>
+  <title>Ubuntu下安装proxychains教程 | DavidHSiang的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="浙江工业大学之江学院,17级在读生,软件工程专业">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DavidHSiang的博客">
-<meta property="og:url" content="https://davidhsiang.github.io/tags/Spring/index.html">
+  <meta name="description" content="1. 安装1.1 编译安装1.1.0 确保ubuntu安装了C的编译器(如gcc)  1gcc --version       若未安装GCC，可参考Ubuntu下安装gcc 1.1.1 下载源码包  1git clone https:&#x2F;&#x2F;github.com&#x2F;rofl0r&#x2F;proxychains-ng.git 1.1.2 进入安装目录  1cd proxy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu下安装proxychains教程">
+<meta property="og:url" content="https://davidhsiang.github.io/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85proxychains%E6%95%99%E7%A8%8B/index.html">
 <meta property="og:site_name" content="DavidHSiang的博客">
-<meta property="og:description" content="浙江工业大学之江学院,17级在读生,软件工程专业">
+<meta property="og:description" content="1. 安装1.1 编译安装1.1.0 确保ubuntu安装了C的编译器(如gcc)  1gcc --version       若未安装GCC，可参考Ubuntu下安装gcc 1.1.1 下载源码包  1git clone https:&#x2F;&#x2F;github.com&#x2F;rofl0r&#x2F;proxychains-ng.git 1.1.2 进入安装目录  1cd proxy">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://davidhsiang.github.io/assets/blogImg/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85proxychains%E6%95%99%E7%A8%8B/%E6%A3%80%E6%9F%A5GCC%E5%AE%89%E8%A3%85.png">
+<meta property="article:published_time" content="2020-04-08T03:32:36.000Z">
+<meta property="article:modified_time" content="2020-04-08T03:50:37.408Z">
 <meta property="article:author" content="DavidHSiang">
-<meta property="article:tag" content="后端">
-<meta property="article:tag" content="ssh">
-<meta property="article:tag" content="ssm">
-<meta property="article:tag" content="hibernate">
-<meta property="article:tag" content="mybatis">
-<meta property="article:tag" content="spring">
-<meta property="article:tag" content="springmvc">
-<meta property="article:tag" content="struts2">
-<meta property="article:tag" content="java">
-<meta property="article:tag" content="开发者">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="程序媛">
-<meta property="article:tag" content="极客">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="Programmer">
-<meta property="article:tag" content="Coder">
-<meta property="article:tag" content="Geek">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="css">
-<meta property="article:tag" content="css3">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="VPN">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://davidhsiang.github.io/assets/blogImg/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85proxychains%E6%95%99%E7%A8%8B/%E6%A3%80%E6%9F%A5GCC%E5%AE%89%E8%A3%85.png">
   
     <link rel="alternative" href="/atom.xml" title="DavidHSiang的博客" type="application/atom+xml">
   
@@ -165,64 +148,212 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Ubuntu下安装proxychains教程" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/07/Spring%E6%95%B4%E5%90%88Junit/" class="archive-article-date">
-  	<time datetime="2020-04-07T12:04:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/07/Spring%E6%95%B4%E5%90%88Junit/">Spring整合Junit</a>
+    <h1 class="article-title" itemprop="name">
+      Ubuntu下安装proxychains教程
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85proxychains%E6%95%99%E7%A8%8B/" class="archive-article-date">
+  	<time datetime="2020-04-08T03:32:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><h4 id="1-1-编译安装"><a href="#1-1-编译安装" class="headerlink" title="1.1 编译安装"></a>1.1 编译安装</h4><h5 id="1-1-0-确保ubuntu安装了C的编译器-如gcc"><a href="#1-1-0-确保ubuntu安装了C的编译器-如gcc" class="headerlink" title="1.1.0 确保ubuntu安装了C的编译器(如gcc)"></a>1.1.0 确保ubuntu安装了C的编译器(如gcc)</h5>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc --version</span><br></pre></td></tr></table></figure>
+
+<p>  <img src="/assets/blogImg/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85proxychains%E6%95%99%E7%A8%8B/%E6%A3%80%E6%9F%A5GCC%E5%AE%89%E8%A3%85.png" alt="检查GCC安装"></p>
+<p>  若未安装GCC，可参考<a href="/2020/04/08/Ubuntu下安装gcc/">Ubuntu下安装gcc</a></p>
+<h5 id="1-1-1-下载源码包"><a href="#1-1-1-下载源码包" class="headerlink" title="1.1.1 下载源码包"></a>1.1.1 下载源码包</h5>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;rofl0r&#x2F;proxychains-ng.git</span><br></pre></td></tr></table></figure>
+<h5 id="1-1-2-进入安装目录"><a href="#1-1-2-进入安装目录" class="headerlink" title="1.1.2 进入安装目录"></a>1.1.2 进入安装目录</h5>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd proxychains-ng&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-1-3-编译安装"><a href="#1-1-3-编译安装" class="headerlink" title="1.1.3 编译安装"></a>1.1.3 编译安装</h5>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;configure --prefix&#x3D;&#x2F;usr --sysconfdir&#x3D;&#x2F;etc</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">make install-config  # 创建配置文件</span><br></pre></td></tr></table></figure>
+
+<a id="more"></a>
+
+<h4 id="1-2-apt安装"><a href="#1-2-apt安装" class="headerlink" title="1.2 apt安装"></a>1.2 apt安装</h4><p>  注意apt源安装的是第3版的proxychains<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install proxychains</span><br></pre></td></tr></table></figure></p>
+<hr>
+<h3 id="2-配置proxyChains"><a href="#2-配置proxyChains" class="headerlink" title="2. 配置proxyChains"></a>2. 配置proxyChains</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;proxychains.conf</span><br></pre></td></tr></table></figure>
+
+<p>  将dynamic_chain前面的注释去掉，再将[ProxyList]下的socks4 改为socks5，并且127.0.0.1后面的端口改为1080</p>
+<hr>
+<h3 id="3-proxyChains的使用"><a href="#3-proxyChains的使用" class="headerlink" title="3.proxyChains的使用"></a>3.proxyChains的使用</h3><h4 id="3-1-测试连接"><a href="#3-1-测试连接" class="headerlink" title="3.1 测试连接"></a>3.1 测试连接</h4>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxyresolv www.google.com</span><br></pre></td></tr></table></figure>
+<h4 id="3-2-运行程序"><a href="#3-2-运行程序" class="headerlink" title="3.2 运行程序"></a>3.2 运行程序</h4>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains programe&#39;s_name</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><p><a href="https://www.jianshu.com/p/3f392367b41f" target="_blank" rel="noopener">Ubuntu系统中使用ProxyChains设置网络代理</a></p>
+<p><a href="https://blog.csdn.net/Lazybones_3/article/details/85129470" target="_blank" rel="noopener">ubuntu下安装proxychains</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃屎<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Junit</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">VPN</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://davidhsiang.github.io/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85proxychains%E6%95%99%E7%A8%8B/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gcc/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Ubuntu下安装gcc
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/04/07/Spring%E6%95%B4%E5%90%88Junit/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Spring整合Junit</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -245,9 +376,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

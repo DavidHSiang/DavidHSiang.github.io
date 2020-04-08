@@ -167,6 +167,344 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Ubuntu搭建SSR服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/08/Ubuntu%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/">Ubuntu搭建SSR代理服务器</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/08/Ubuntu%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
+  	<time datetime="2020-04-08T04:10:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="0-安装SSR代理软件"><a href="#0-安装SSR代理软件" class="headerlink" title="0. 安装SSR代理软件"></a>0. 安装SSR代理软件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;ToyoDAdoubi&#x2F;doubi&#x2F;master&#x2F;ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br></pre></td></tr></table></figure>
+
+<p>  <img src="/assets/blogImg/Ubuntu%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/%E4%B8%8B%E8%BD%BDSSR%E8%84%9A%E6%9C%AC.png" alt="下载SSR脚本"></p>
+        
+          <a class="article-more-a" href="/2020/04/08/Ubuntu%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">VPN</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/08/Ubuntu%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Ubuntu安装SSR" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/08/Ubuntu%E5%AE%89%E8%A3%85SSR/">Ubuntu下安装SSR</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/08/Ubuntu%E5%AE%89%E8%A3%85SSR/" class="archive-article-date">
+  	<time datetime="2020-04-08T03:56:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="0-SSR的原理"><a href="#0-SSR的原理" class="headerlink" title="0.SSR的原理"></a>0.SSR的原理</h3><p><img src="/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/SSR%E5%8E%9F%E7%90%86.jpg" alt="SSR原理"></p>
+<ol>
+<li>通过Proxy chains，把本地的流量转发到1080端口</li>
+<li>localhost 的1080 端口和VPS 的8080 端口通过shadowsocksr建立ssr连接</li>
+<li>通过VPS访问目标站点</li>
+<li>本地流量 -&gt; localhost 1080 -&gt; VPS 8080 -&gt; 目标站点</li>
+</ol>
+        
+          <a class="article-more-a" href="/2020/04/08/Ubuntu%E5%AE%89%E8%A3%85SSR/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">VPN</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/08/Ubuntu%E5%AE%89%E8%A3%85SSR/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Ubuntu下安装gcc" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gcc/">Ubuntu下安装gcc</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gcc/" class="archive-article-date">
+  	<time datetime="2020-04-08T03:42:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-更新包列表"><a href="#1-更新包列表" class="headerlink" title="1. 更新包列表"></a>1. 更新包列表</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="2-安装build-essential软件包"><a href="#2-安装build-essential软件包" class="headerlink" title="2. 安装build-essential软件包"></a>2. 安装build-essential软件包</h3>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install build-essential</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gcc/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C/C++</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gcc/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Ubuntu下安装proxychains教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85proxychains%E6%95%99%E7%A8%8B/">Ubuntu下安装proxychains教程</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85proxychains%E6%95%99%E7%A8%8B/" class="archive-article-date">
+  	<time datetime="2020-04-08T03:32:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><h4 id="1-1-编译安装"><a href="#1-1-编译安装" class="headerlink" title="1.1 编译安装"></a>1.1 编译安装</h4><h5 id="1-1-0-确保ubuntu安装了C的编译器-如gcc"><a href="#1-1-0-确保ubuntu安装了C的编译器-如gcc" class="headerlink" title="1.1.0 确保ubuntu安装了C的编译器(如gcc)"></a>1.1.0 确保ubuntu安装了C的编译器(如gcc)</h5>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc --version</span><br></pre></td></tr></table></figure>
+
+<p>  <img src="/assets/blogImg/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85proxychains%E6%95%99%E7%A8%8B/%E6%A3%80%E6%9F%A5GCC%E5%AE%89%E8%A3%85.png" alt="检查GCC安装"></p>
+<p>  若未安装GCC，可参考<a href="/2020/04/08/Ubuntu下安装gcc/">Ubuntu下安装gcc</a></p>
+<h5 id="1-1-1-下载源码包"><a href="#1-1-1-下载源码包" class="headerlink" title="1.1.1 下载源码包"></a>1.1.1 下载源码包</h5>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;rofl0r&#x2F;proxychains-ng.git</span><br></pre></td></tr></table></figure>
+<h5 id="1-1-2-进入安装目录"><a href="#1-1-2-进入安装目录" class="headerlink" title="1.1.2 进入安装目录"></a>1.1.2 进入安装目录</h5>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd proxychains-ng&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-1-3-编译安装"><a href="#1-1-3-编译安装" class="headerlink" title="1.1.3 编译安装"></a>1.1.3 编译安装</h5>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">.&#x2F;configure --prefix&#x3D;&#x2F;usr --sysconfdir&#x3D;&#x2F;etc</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">make install-config  # 创建配置文件</span><br></pre></td></tr></table></figure>
+        
+          <a class="article-more-a" href="/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85proxychains%E6%95%99%E7%A8%8B/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">VPN</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85proxychains%E6%95%99%E7%A8%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-Spring整合Junit" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -421,15 +759,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Junit</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Ubuntu</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">C/C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">VPN</a>
               </li>
             
             <div class="clearfix"></div>

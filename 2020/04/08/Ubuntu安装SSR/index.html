@@ -6,40 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://davidhsiang.github.io">
-  <title>Tag: Spring | DavidHSiang的博客</title>
+  <title>Ubuntu下安装SSR | DavidHSiang的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="浙江工业大学之江学院,17级在读生,软件工程专业">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DavidHSiang的博客">
-<meta property="og:url" content="https://davidhsiang.github.io/tags/Spring/index.html">
+  <meta name="description" content="0.SSR的原理  通过Proxy chains，把本地的流量转发到1080端口 localhost 的1080 端口和VPS 的8080 端口通过shadowsocksr建立ssr连接 通过VPS访问目标站点 本地流量 -&gt; localhost 1080 -&gt; VPS 8080 -&gt; 目标站点">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu下安装SSR">
+<meta property="og:url" content="https://davidhsiang.github.io/2020/04/08/Ubuntu%E5%AE%89%E8%A3%85SSR/index.html">
 <meta property="og:site_name" content="DavidHSiang的博客">
-<meta property="og:description" content="浙江工业大学之江学院,17级在读生,软件工程专业">
+<meta property="og:description" content="0.SSR的原理  通过Proxy chains，把本地的流量转发到1080端口 localhost 的1080 端口和VPS 的8080 端口通过shadowsocksr建立ssr连接 通过VPS访问目标站点 本地流量 -&gt; localhost 1080 -&gt; VPS 8080 -&gt; 目标站点">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://davidhsiang.github.io/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/SSR%E5%8E%9F%E7%90%86.jpg">
+<meta property="og:image" content="https://davidhsiang.github.io/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/%E6%9F%A5%E6%89%BEproxychains%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85.png">
+<meta property="og:image" content="https://davidhsiang.github.io/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/proxychains%E9%85%8D%E7%BD%AEdynamic_chain.png">
+<meta property="og:image" content="https://davidhsiang.github.io/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/proxychains%E9%85%8D%E7%BD%AE%E8%BD%AC%E5%8F%91.png">
+<meta property="og:image" content="https://davidhsiang.github.io/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B01080%E7%AB%AF%E5%8F%A3.png">
+<meta property="og:image" content="https://davidhsiang.github.io/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE%E6%88%90%E5%8A%9F.png">
+<meta property="article:published_time" content="2020-04-08T03:56:36.000Z">
+<meta property="article:modified_time" content="2020-04-08T04:06:55.347Z">
 <meta property="article:author" content="DavidHSiang">
-<meta property="article:tag" content="后端">
-<meta property="article:tag" content="ssh">
-<meta property="article:tag" content="ssm">
-<meta property="article:tag" content="hibernate">
-<meta property="article:tag" content="mybatis">
-<meta property="article:tag" content="spring">
-<meta property="article:tag" content="springmvc">
-<meta property="article:tag" content="struts2">
-<meta property="article:tag" content="java">
-<meta property="article:tag" content="开发者">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="程序媛">
-<meta property="article:tag" content="极客">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="Programmer">
-<meta property="article:tag" content="Coder">
-<meta property="article:tag" content="Geek">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="css">
-<meta property="article:tag" content="css3">
+<meta property="article:tag" content="Ubuntu">
+<meta property="article:tag" content="VPN">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://davidhsiang.github.io/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/SSR%E5%8E%9F%E7%90%86.jpg">
   
     <link rel="alternative" href="/atom.xml" title="DavidHSiang的博客" type="application/atom+xml">
   
@@ -165,64 +153,252 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Ubuntu安装SSR" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/07/Spring%E6%95%B4%E5%90%88Junit/" class="archive-article-date">
-  	<time datetime="2020-04-07T12:04:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/07/Spring%E6%95%B4%E5%90%88Junit/">Spring整合Junit</a>
+    <h1 class="article-title" itemprop="name">
+      Ubuntu下安装SSR
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/04/08/Ubuntu%E5%AE%89%E8%A3%85SSR/" class="archive-article-date">
+  	<time datetime="2020-04-08T03:56:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="0-SSR的原理"><a href="#0-SSR的原理" class="headerlink" title="0.SSR的原理"></a>0.SSR的原理</h3><p><img src="/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/SSR%E5%8E%9F%E7%90%86.jpg" alt="SSR原理"></p>
+<ol>
+<li>通过Proxy chains，把本地的流量转发到1080端口</li>
+<li>localhost 的1080 端口和VPS 的8080 端口通过shadowsocksr建立ssr连接</li>
+<li>通过VPS访问目标站点</li>
+<li>本地流量 -&gt; localhost 1080 -&gt; VPS 8080 -&gt; 目标站点</li>
+</ol>
+<a id="more"></a>
+
+<hr>
+<h3 id="1-配置Proxy-chains"><a href="#1-配置Proxy-chains" class="headerlink" title="1.配置Proxy chains"></a>1.配置Proxy chains</h3><p>0.在配置Proxy chains之前，首先要查看本机是否安装Proxy chains</p>
+<ul>
+<li><p>输入指令<code>dpkg -s proxychains</code></p>
+</li>
+<li><p>若如下图显示，则代表已经安装</p>
+<p><img src="/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/%E6%9F%A5%E6%89%BEproxychains%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85.png" alt="查找proxychains是否安装"></p>
+</li>
+<li><p>若没有安装proxychains，可查看：<a href="/2020/04/08/Ubuntu下安装proxychains教程/">Ubuntu下安装proxychains教程</a></p>
+</li>
+</ul>
+<p>1.配置Proxy chains</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim &#x2F;etc&#x2F;proxychains.conf</span><br></pre></td></tr></table></figure>
+
+<p>将dynamic_chain前面的注释去掉，再将[ProxyList]下的socks4 改为socks5，并且127.0.0.1后面的端口改为1080</p>
+<p>  <img src="/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/proxychains%E9%85%8D%E7%BD%AEdynamic_chain.png" alt="配置dynamic_chain"></p>
+<p>  <img src="/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/proxychains%E9%85%8D%E7%BD%AE%E8%BD%AC%E5%8F%91.png" alt="proxychains配置转发"></p>
+<hr>
+<h3 id="2-安装SSR"><a href="#2-安装SSR" class="headerlink" title="2.安装SSR"></a>2.安装SSR</h3><p>1.下载SSR脚本</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget https://onlyless.github.io/ssr</span><br><span class="line">sudo mv ssr /usr/<span class="built_in">local</span>/bin</span><br><span class="line">sudo chmod 766 /usr/<span class="built_in">local</span>/bin/ssr</span><br></pre></td></tr></table></figure>
+
+<p>2.安装SSR</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssr install</span><br></pre></td></tr></table></figure>
+
+<p>3.配置SSR</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssr config</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"server"</span>: <span class="string">"0.0.0.0"</span>,   <span class="comment">//服务器IP地址</span></span><br><span class="line">    <span class="attr">"server_ipv6"</span>: <span class="string">"::"</span>,</span><br><span class="line">    <span class="attr">"server_port"</span>: <span class="number">2333</span>,  <span class="comment">//端口</span></span><br><span class="line">    <span class="attr">"local_address"</span>: <span class="string">"127.0.0.1"</span>,</span><br><span class="line">    <span class="attr">"local_port"</span>: <span class="number">1080</span>,</span><br><span class="line"></span><br><span class="line">    <span class="attr">"password"</span>: <span class="string">"password"</span>,  <span class="comment">//密码</span></span><br><span class="line">    <span class="attr">"method"</span>: <span class="string">"aes-256-cfb"</span>, <span class="comment">//加密方式</span></span><br><span class="line">    <span class="attr">"protocol"</span>: <span class="string">"auth_aes128_md5"</span>, <span class="comment">//协议</span></span><br><span class="line">    <span class="attr">"protocol_param"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="attr">"obfs"</span>: <span class="string">"plain"</span>,  <span class="comment">//混淆方式</span></span><br><span class="line">    <span class="attr">"obfs_param"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="attr">"speed_limit_per_con"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">"speed_limit_per_user"</span>: <span class="number">0</span>,</span><br><span class="line"></span><br><span class="line">    <span class="attr">"additional_ports"</span> : &#123;&#125;,</span><br><span class="line">    <span class="attr">"additional_ports_only"</span> : <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"timeout"</span>: <span class="number">120</span>,</span><br><span class="line">    <span class="attr">"udp_timeout"</span>: <span class="number">60</span>,</span><br><span class="line">    <span class="attr">"dns_ipv6"</span>: <span class="literal">false</span>,</span><br><span class="line">    <span class="attr">"connect_verbose_info"</span>: <span class="number">0</span>,</span><br><span class="line">    <span class="attr">"redirect"</span>: <span class="string">""</span>,</span><br><span class="line">    <span class="attr">"fast_open"</span>: <span class="literal">false</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>配置完之后保存，ssr就会自动启动，查看本地1080端口：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo lsof -i:1080</span><br></pre></td></tr></table></figure>
+
+<p><img src="/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/%E6%9F%A5%E7%9C%8B%E6%9C%AC%E5%9C%B01080%E7%AB%AF%E5%8F%A3.png" alt="查看本地1080端口"></p>
+<hr>
+<h3 id="3-启动代理"><a href="#3-启动代理" class="headerlink" title="3.启动代理"></a>3.启动代理</h3><p>1.ssr的启动和关闭方式为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssr start</span><br><span class="line">ssr stop</span><br></pre></td></tr></table></figure>
+
+<p>2.通过proxyresolv测试代理是否成功</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxyresolv www.google.com</span><br></pre></td></tr></table></figure>
+
+<p>若执行<code>proxyresolv www.google.com</code>报错找不到命令，则执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/lib/proxychains3/proxyresolv /usr/bin/</span><br></pre></td></tr></table></figure>
+
+<p>若显示：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">|S-chain|-&lt;&gt;-127.0.0.1:1080-&lt;&gt;&lt;&gt;-4.2.2.2:53-&lt;&gt;&lt;&gt;-OK</span><br></pre></td></tr></table></figure>
+
+<p>说明没问题，使用proxychain firefox命令启动火狐浏览器：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">proxychains firefox</span><br></pre></td></tr></table></figure>
+
+<p><img src="/assets/blogImg/Ubuntu%E5%AE%89%E8%A3%85SSR/%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE%E6%88%90%E5%8A%9F.png" alt="代理设置成功"></p>
+<hr>
+<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><p><a href="http://blog.qqzzz.net/?post=54" target="_blank" rel="noopener">Kali代理之SSR和proxychains</a></p>
+<p><a href="https://blog.csdn.net/tration/article/details/81199590" target="_blank" rel="noopener">在ubuntu检查一个软件包是否安装</a></p>
+<p><a href="https://www.cnblogs.com/pythonal/p/9301350.html" target="_blank" rel="noopener">kali安装后配置</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃屎<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Junit</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">VPN</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://davidhsiang.github.io/2020/04/08/Ubuntu%E5%AE%89%E8%A3%85SSR/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/04/08/Ubuntu%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Ubuntu搭建SSR代理服务器
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85gcc/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Ubuntu下安装gcc</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -245,9 +421,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
