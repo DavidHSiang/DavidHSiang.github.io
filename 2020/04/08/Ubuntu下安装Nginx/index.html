@@ -6,39 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://davidhsiang.github.io">
-  <title>Tag: Junit | DavidHSiang的博客</title>
+  <title>Ubuntu下安装Nginx | DavidHSiang的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="浙江工业大学之江学院,17级在读生,软件工程专业">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DavidHSiang的博客">
-<meta property="og:url" content="https://davidhsiang.github.io/tags/Junit/index.html">
+  <meta name="description" content="一、检查&#x2F;安装相关依赖首先使用dpkg命令查看自己需要的软件是否安装 1dpkg -l | grep libname  解决依赖包openssl安装，命令： 1sudo apt-get install openssl libssl-dev  解决依赖包pcre安装，命令： 1sudo apt-get install libpcre3 libpcre3-dev  解决依赖包zlib安装，命令： 1s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ubuntu下安装Nginx">
+<meta property="og:url" content="https://davidhsiang.github.io/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/index.html">
 <meta property="og:site_name" content="DavidHSiang的博客">
-<meta property="og:description" content="浙江工业大学之江学院,17级在读生,软件工程专业">
+<meta property="og:description" content="一、检查&#x2F;安装相关依赖首先使用dpkg命令查看自己需要的软件是否安装 1dpkg -l | grep libname  解决依赖包openssl安装，命令： 1sudo apt-get install openssl libssl-dev  解决依赖包pcre安装，命令： 1sudo apt-get install libpcre3 libpcre3-dev  解决依赖包zlib安装，命令： 1s">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-04-08T04:42:36.000Z">
+<meta property="article:modified_time" content="2020-04-08T05:04:06.609Z">
 <meta property="article:author" content="DavidHSiang">
-<meta property="article:tag" content="后端">
-<meta property="article:tag" content="ssh">
-<meta property="article:tag" content="ssm">
-<meta property="article:tag" content="hibernate">
-<meta property="article:tag" content="mybatis">
-<meta property="article:tag" content="spring">
-<meta property="article:tag" content="springmvc">
-<meta property="article:tag" content="struts2">
-<meta property="article:tag" content="java">
-<meta property="article:tag" content="开发者">
-<meta property="article:tag" content="程序猿">
-<meta property="article:tag" content="程序媛">
-<meta property="article:tag" content="极客">
-<meta property="article:tag" content="编程">
-<meta property="article:tag" content="代码">
-<meta property="article:tag" content="开源">
-<meta property="article:tag" content="IT网站">
-<meta property="article:tag" content="Programmer">
-<meta property="article:tag" content="Coder">
-<meta property="article:tag" content="Geek">
-<meta property="article:tag" content="html">
-<meta property="article:tag" content="css">
-<meta property="article:tag" content="css3">
+<meta property="article:tag" content="Nginx">
+<meta property="article:tag" content="Ubuntu">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="DavidHSiang的博客" type="application/atom+xml">
@@ -165,64 +146,241 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Ubuntu下安装Nginx" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/04/07/Spring%E6%95%B4%E5%90%88Junit/" class="archive-article-date">
-  	<time datetime="2020-04-07T12:04:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-07</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/04/07/Spring%E6%95%B4%E5%90%88Junit/">Spring整合Junit</a>
+    <h1 class="article-title" itemprop="name">
+      Ubuntu下安装Nginx
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/" class="archive-article-date">
+  	<time datetime="2020-04-08T04:42:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="一、检查-安装相关依赖"><a href="#一、检查-安装相关依赖" class="headerlink" title="一、检查/安装相关依赖"></a>一、检查/安装相关依赖</h3><p>首先使用dpkg命令查看自己需要的软件是否安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg -l | grep libname</span><br></pre></td></tr></table></figure>
+
+<p>解决依赖包openssl安装，命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssl libssl-dev</span><br></pre></td></tr></table></figure>
+
+<p>解决依赖包pcre安装，命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libpcre3 libpcre3-dev</span><br></pre></td></tr></table></figure>
+
+<p>解决依赖包zlib安装，命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install zlib1g-dev</span><br></pre></td></tr></table></figure>
+
+<hr>
+<a id="more"></a>
+
+<h3 id="二、下载并安装nginx"><a href="#二、下载并安装nginx" class="headerlink" title="二、下载并安装nginx"></a>二、下载并安装nginx</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载nginx安装包，官网：http://nginx.org/en/download.html</span></span><br><span class="line">sudo wget http://nginx.org/download/nginx-1.16.1.tar.gz</span><br><span class="line"><span class="comment"># 将安装包移动至 /usr/local/src 目录下</span></span><br><span class="line">sudo mv nginx-1.16.1.tar.gz /usr/<span class="built_in">local</span>/src</span><br><span class="line"><span class="comment"># 加载 /usr/local/src 目录</span></span><br><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/src</span><br><span class="line"><span class="comment"># 解压安装包</span></span><br><span class="line">sudo tar zxvf nginx-1.16.1.tar.gz</span><br><span class="line"><span class="comment"># 进入解压后的文件夹 nginx-1.16.1</span></span><br><span class="line"><span class="built_in">cd</span> nginx-1.16.1/</span><br><span class="line"><span class="comment"># 设置配置信息</span></span><br><span class="line"><span class="comment"># 若不加sudo会报错，error: C compiler cc is not found</span></span><br><span class="line">sudo ./configure --prefix=/usr/<span class="built_in">local</span>/nginx</span><br><span class="line"><span class="comment"># 编译</span></span><br><span class="line">sudo make</span><br><span class="line"><span class="comment"># 安装</span></span><br><span class="line">sudo make install</span><br><span class="line"><span class="comment"># 加载 nginx 所在文件夹</span></span><br><span class="line"><span class="built_in">cd</span> /usr/<span class="built_in">local</span>/nginx/</span><br><span class="line"><span class="comment"># 启动 nginx (需加sudo权限)</span></span><br><span class="line">sudo ./sbin/nginx</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="三、解决-80-端口被占用"><a href="#三、解决-80-端口被占用" class="headerlink" title="三、解决 80 端口被占用"></a>三、解决 80 端口被占用</h3><p>当使用<code>sudo ./sbin/nginx</code>启动 nginx 时，若 80 端口此时被占用，则会出现报错</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nginx: [emerg] <span class="built_in">bind</span>() to 0.0.0.0:80 failed (98: Address already <span class="keyword">in</span> use)</span><br><span class="line">nginx: [emerg] <span class="built_in">bind</span>() to 0.0.0.0:80 failed (98: Address already <span class="keyword">in</span> use)</span><br><span class="line">nginx: [emerg] <span class="built_in">bind</span>() to 0.0.0.0:80 failed (98: Address already <span class="keyword">in</span> use)</span><br><span class="line">nginx: [emerg] <span class="built_in">bind</span>() to 0.0.0.0:80 failed (98: Address already <span class="keyword">in</span> use)</span><br><span class="line">nginx: [emerg] <span class="built_in">bind</span>() to 0.0.0.0:80 failed (98: Address already <span class="keyword">in</span> use)</span><br><span class="line">nginx: [emerg] still could not <span class="built_in">bind</span>()</span><br></pre></td></tr></table></figure>
+
+<p>解决方法是，查看占用 80 端口的进程，并把他删除(确保该进程不需要使用了)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看占用 80 端口的进程</span></span><br><span class="line">sudo netstat -antp</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>Proto</th>
+<th>Recv-Q</th>
+<th>Send-Q</th>
+<th>Local Address</th>
+<th>Foreign Address</th>
+<th>State</th>
+<th>PID/Program name</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>tcp</td>
+<td>0</td>
+<td>0</td>
+<td>0.0.0.0:80</td>
+<td>0.0.0.0:*</td>
+<td>LISTEN</td>
+<td>12350/nginx: master</td>
+</tr>
+</tbody></table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 杀死进程12350</span></span><br><span class="line">sudo <span class="built_in">kill</span> -9 12350</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h3><p><a href="https://blog.csdn.net/qq_33421902/article/details/80237266" target="_blank" rel="noopener">linux下解决80端口被占用</a></p>
+<p><a href="https://blog.csdn.net/z920954494/article/details/52132125" target="_blank" rel="noopener">ubuntu下安装nginx时依赖库zlib，pcre，openssl安装方法</a></p>
+<p><a href="https://blog.csdn.net/hybaym/article/details/50929958" target="_blank" rel="noopener">linux下安装nginx error: the HTTP rewrite module requires the PCRE library.</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃屎<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/weixin.png">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Junit</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Ubuntu</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://davidhsiang.github.io/2020/04/08/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/04/08/Nginx%E5%90%AF%E5%8A%A8%E6%97%B6%E6%8A%A5%E9%94%99:bind%20to%2080%20failed/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Nginx启动时报错:bind to 80 failed
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/04/08/Ubuntu%E9%80%9A%E8%BF%87SSH%E8%BF%9E%E6%8E%A5%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Ubuntu通过SSH连接云服务器</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -245,9 +403,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
