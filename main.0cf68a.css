@@ -3427,7 +3427,8 @@ pre .id {
     }
     .header-menu.tools-nav li a.active,
     .header-menu.tools-nav ul a.active {
-        background: #81b5cc
+        background: #4d4d4d
+        /* background: #81b5cc */
     }
     .header-menu ul {
         text-align: center;
@@ -4279,13 +4280,19 @@ category-all-page {
 
 .category-list-item-list>li:first-child>a:first-child,
 .category-list-item-list>li:first-child~*>a:first-child {
-    display: inline-block;
-    width: 100%;
     background-color: #adadad;
     color: #fff;
     text-align: center;
     border-radius: 10px;
     padding: 5px 0px;
+    /* ----大分类居中---- */
+    margin-left: 30%;
+    margin-right: 30%;
+    display: block;
+    min-width: 100px;
+    /* ----大分类占一整行---- */
+    /* display: inline-block; */
+    /* width: 100%; */
 }
 
 .category-list-item-list>li:first-child>a:first-child:hover,
@@ -4295,21 +4302,62 @@ category-all-page {
 
 .category-list-item-list>li:first-child>a:first-child+span,
 .category-list-item-list>li:first-child~*>a:first-child+span {
-    display: inline;
-    /* margin-left: -50%; */
-    right: 35px;
-    /* margin-left: -35px; */
+    color: #fff;
+    padding: 5px 0px;
+    position: absolute;
+    /* ----大分类居中---- */
+    right: 30%;
+    display: block;
+    padding-right: 15px;
+    margin-top: -40px;
+    /* ----大分类占一整行---- */
+    /* display: inline; */
+    /* right: 35px; */
+    /* ----测试---- */
+    /* color: red; */
     /* right:50%; 
   margin-top: 30px; */
-    /* right:40px;  */
-    color: #fff;
-    position: absolute;
-    padding: 5px 0px;
 }
 
-@media screen and (max-width:800px) {
+
+/* ----大分类占一整行---- */
+
+
+/* @media screen and (max-width:800px) {
     .category-list-item-list>li:first-child>a:first-child+span,
     .category-list-item-list>li:first-child~*>a:first-child+span {
+        display: inline;
+        right: 45px;
+        color: #fff;
+        position: absolute;
+        padding: 5px 0px;
+    }
+} */
+
+
+/* ---大分类居中--- */
+
+@media screen and (max-width:800px) {
+    .category-list-item-list>li:first-child>a:first-child,
+    .category-list-item-list>li:first-child~*>a:first-child {
+        background-color: #adadad;
+        color: #fff;
+        text-align: center;
+        border-radius: 10px;
+        padding: 5px 0px;
+        margin-left: 0%;
+        margin-right: 0%;
+        display: inline-block;
+        width: 100%;
+    }
+    .category-list-item-list>li:first-child>a:first-child+span,
+    .category-list-item-list>li:first-child~*>a:first-child+span {
+        color: #fff;
+        padding: 5px 0px;
+        position: absolute;
+        right: 0%;
+        padding-right: auto;
+        margin-top: 0px;
         display: inline;
         right: 45px;
         color: #fff;
@@ -4424,4 +4472,25 @@ category-all-page {
     position: absolute;
     top: 7px;
     left: 2px;
+}
+
+.article-entry .article-more-a {
+    display: block;
+    box-sizing: border-box;
+    /* width: 100%; */
+    /* width: 100px; */
+    margin-left: 40%;
+    margin-right: 40%;
+    /* width: 100px; */
+    min-width: 100px;
+    max-width: 200px;
+    background-color: #ADADAD;
+    border-radius: 10px;
+    border: 3px solid #4d4d4d;
+    text-align: center;
+    padding: 2px 10px;
+}
+
+.article-entry .article-more-a:hover {
+    background-color: #ededed;
 }

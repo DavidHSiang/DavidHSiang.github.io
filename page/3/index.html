@@ -186,20 +186,20 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Nginx基本配置与参数说明" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-VS报错-TCHAR的实参与CHAR的形参不兼容" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/Nginx%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E/">Nginx基本配置与参数说明</a>
+      <a class="article-title" href="/assets/mdrepository/VS%E6%8A%A5%E9%94%99-TCHAR%E7%9A%84%E5%AE%9E%E5%8F%82%E4%B8%8ECHAR%E7%9A%84%E5%BD%A2%E5%8F%82%E4%B8%8D%E5%85%BC%E5%AE%B9/">VS报错-TCHAR *的实参与char *的形参不兼容</a>
     </h1>
   
 
         
-        <a href="/assets/mdrepository/Nginx%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E/" class="archive-article-date">
-  	<time datetime="2020-04-08T06:12:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
+        <a href="/assets/mdrepository/VS%E6%8A%A5%E9%94%99-TCHAR%E7%9A%84%E5%AE%9E%E5%8F%82%E4%B8%8ECHAR%E7%9A%84%E5%BD%A2%E5%8F%82%E4%B8%8D%E5%85%BC%E5%AE%B9/" class="archive-article-date">
+  	<time datetime="2020-04-11T04:23:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
 </a>
         
       </header>
@@ -209,9 +209,24 @@
       
       <!---->
       
-        <p>转载自: <a href="https://www.nginx.cn/76.html" target="_blank" rel="noopener">https://www.nginx.cn/76.html</a></p>
+        <h2 id=""><a href="#" class="headerlink" title=""></a></h2><h3 id="char、CHAR、TCHAR、WCHAR的关系"><a href="#char、CHAR、TCHAR、WCHAR的关系" class="headerlink" title="char、CHAR、TCHAR、WCHAR的关系"></a>char、CHAR、TCHAR、WCHAR的关系</h3><p>char：</p>
+<ul>
+<li>C语言标准数据类型，字符型</li>
+<li>由几个字节组成通常由编译器决定，一般一个字节。</li>
+</ul>
+<p>Windows为了消除各编译器的差别，重新定义了一些数据类型</p>
+<p>CHAR</p>
+<ul>
+<li>ANSI字符</li>
+<li>单字节字符</li>
+</ul>
+<p>WCHAR</p>
+<ul>
+<li>Unicode字符</li>
+<li>不论中英文，每个字有两个字节组成。</li>
+</ul>
         
-          <a class="article-more-a" href="/assets/mdrepository/Nginx%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E/#more">more >></a>
+          <a class="article-more-a" href="/assets/mdrepository/VS%E6%8A%A5%E9%94%99-TCHAR%E7%9A%84%E5%AE%9E%E5%8F%82%E4%B8%8ECHAR%E7%9A%84%E5%BD%A2%E5%8F%82%E4%B8%8D%E5%85%BC%E5%AE%B9/#more">more >></a>
         
       
 
@@ -225,7 +240,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C/C++</a>
         		</li>
       		
 		</ul>
@@ -237,11 +252,19 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关//" class="article-tag-list-link color1">服务器相关</a>
+        			<a href="/categories/后端语言//" class="article-tag-list-link color5">后端语言</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关/Nginx//" class="article-tag-list-link color1">Nginx</a>
+        			<a href="/categories/开发工具//" class="article-tag-list-link color5">开发工具</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/后端语言/C-C//" class="article-tag-list-link color1">C/C++</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/开发工具/VisualStudio//" class="article-tag-list-link color3">VisualStudio</a>
         		</li>
       		
 		</ul>
@@ -250,7 +273,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/Nginx%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE%E4%B8%8E%E5%8F%82%E6%95%B0%E8%AF%B4%E6%98%8E/">展开全文 >></a>
+          <a class="article-more-a" href="/assets/mdrepository/VS%E6%8A%A5%E9%94%99-TCHAR%E7%9A%84%E5%AE%9E%E5%8F%82%E4%B8%8ECHAR%E7%9A%84%E5%BD%A2%E5%8F%82%E4%B8%8D%E5%85%BC%E5%AE%B9/">展开全文 >></a>
         </p>
       
 
@@ -280,20 +303,20 @@
 
 
   
-    <article id="post-Linux下安装Nginx时报错:the HTTP rewrite module requires the PCRE library" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-解决 vscode中GTK+头文件引用找不到" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Nginx%E6%97%B6%E6%8A%A5%E9%94%99:the%20HTTP%20rewrite%20module%20requires%20the%20PCRE%20library/">Linux下安装Nginx时报错:the HTTP rewrite module requires the PCRE library.</a>
+      <a class="article-title" href="/assets/mdrepository/%E8%A7%A3%E5%86%B3%20vscode%E4%B8%ADGTK+%E5%A4%B4%E6%96%87%E4%BB%B6%E5%BC%95%E7%94%A8%E6%89%BE%E4%B8%8D%E5%88%B0/">解决 vscode中GTK+头文件引用找不到</a>
     </h1>
   
 
         
-        <a href="/assets/mdrepository/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Nginx%E6%97%B6%E6%8A%A5%E9%94%99:the%20HTTP%20rewrite%20module%20requires%20the%20PCRE%20library/" class="archive-article-date">
-  	<time datetime="2020-04-08T06:03:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
+        <a href="/assets/mdrepository/%E8%A7%A3%E5%86%B3%20vscode%E4%B8%ADGTK+%E5%A4%B4%E6%96%87%E4%BB%B6%E5%BC%95%E7%94%A8%E6%89%BE%E4%B8%8D%E5%88%B0/" class="archive-article-date">
+  	<time datetime="2020-04-11T02:26:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
 </a>
         
       </header>
@@ -303,17 +326,663 @@
       
       <!---->
       
-        <blockquote>
-<p>错误原因:缺少相关库包PCRE</p>
+        <p>转载自：<a href="https://www.cnblogs.com/hencins/p/12205064.html" target="_blank" rel="noopener">https://www.cnblogs.com/hencins/p/12205064.html</a></p>
+<hr>
+<p>正在进行 GTK 学习, 但是在 vscode GTK 的头文件找不到(头文件引用底下飘红, 逼死强迫症), 影响敲字键入速度.</p>
+<p>解决一下该问题– <strong>vscode中c/c++头文件引用找不到(#include errors detected)</strong></p>
+<p>花了我几十分钟, 可以说相当智障了…</p>
+<p>在 c_cpp_properties.json(就是c/c++的配置文件)里面添加 “includePath”:</p>
+        
+          <a class="article-more-a" href="/assets/mdrepository/%E8%A7%A3%E5%86%B3%20vscode%E4%B8%ADGTK+%E5%A4%B4%E6%96%87%E4%BB%B6%E5%BC%95%E7%94%A8%E6%89%BE%E4%B8%8D%E5%88%B0/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C/C++</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/后端语言//" class="article-tag-list-link color5">后端语言</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/开发工具//" class="article-tag-list-link color5">开发工具</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/后端语言/C-C//" class="article-tag-list-link color1">C/C++</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/开发工具/VSCode//" class="article-tag-list-link color2">VSCode</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assets/mdrepository/%E8%A7%A3%E5%86%B3%20vscode%E4%B8%ADGTK+%E5%A4%B4%E6%96%87%E4%BB%B6%E5%BC%95%E7%94%A8%E6%89%BE%E4%B8%8D%E5%88%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-VS报错-不安全函数C4996的解决方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assets/mdrepository/VS%E6%8A%A5%E9%94%99-%E4%B8%8D%E5%AE%89%E5%85%A8%E5%87%BD%E6%95%B0C4996%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">VS报错-不安全函数(C4996)的解决方法</a>
+    </h1>
+  
+
+        
+        <a href="/assets/mdrepository/VS%E6%8A%A5%E9%94%99-%E4%B8%8D%E5%AE%89%E5%85%A8%E5%87%BD%E6%95%B0C4996%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-04-11T02:15:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h3 id="1-确认不安全函数的报错代码"><a href="#1-确认不安全函数的报错代码" class="headerlink" title="1. 确认不安全函数的报错代码"></a>1. 确认不安全函数的报错代码</h3><p>如下图，不安全函数的报错的代码是：4996</p>
+        
+          <a class="article-more-a" href="/assets/mdrepository/VS%E6%8A%A5%E9%94%99-%E4%B8%8D%E5%AE%89%E5%85%A8%E5%87%BD%E6%95%B0C4996%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">C/C++</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/后端语言//" class="article-tag-list-link color5">后端语言</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/开发工具//" class="article-tag-list-link color5">开发工具</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/后端语言/C-C//" class="article-tag-list-link color1">C/C++</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/开发工具/VisualStudio//" class="article-tag-list-link color3">VisualStudio</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assets/mdrepository/VS%E6%8A%A5%E9%94%99-%E4%B8%8D%E5%AE%89%E5%85%A8%E5%87%BD%E6%95%B0C4996%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Eclipse下使用Git" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assets/mdrepository/Eclipse%E4%B8%8B%E4%BD%BF%E7%94%A8Git/">Eclipse下使用Git</a>
+    </h1>
+  
+
+        
+        <a href="/assets/mdrepository/Eclipse%E4%B8%8B%E4%BD%BF%E7%94%A8Git/" class="archive-article-date">
+  	<time datetime="2020-04-11T00:24:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h3 id="1-在Eclipse中查看Git配置"><a href="#1-在Eclipse中查看Git配置" class="headerlink" title="1. 在Eclipse中查看Git配置"></a>1. 在Eclipse中查看Git配置</h3><ul>
+<li>打开 Window -&gt; Preferences -&gt; Git<ul>
+<li>在configuration -&gt; User Settings 中可以查看全局的签名设置<br>
+
+</li>
+</ul>
+</li>
+</ul>
+        
+          <a class="article-more-a" href="/assets/mdrepository/Eclipse%E4%B8%8B%E4%BD%BF%E7%94%A8Git/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Git</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">Eclipse</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/开发工具//" class="article-tag-list-link color5">开发工具</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/开发工具/Git//" class="article-tag-list-link color4">Git</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/开发工具/Eclipse//" class="article-tag-list-link color3">Eclipse</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assets/mdrepository/Eclipse%E4%B8%8B%E4%BD%BF%E7%94%A8Git/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-CentOS下通过rpm安装JDK" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assets/mdrepository/CentOS%E4%B8%8B%E9%80%9A%E8%BF%87rpm%E5%AE%89%E8%A3%85JDK/">CentOS下通过rpm安装JDK</a>
+    </h1>
+  
+
+        
+        <a href="/assets/mdrepository/CentOS%E4%B8%8B%E9%80%9A%E8%BF%87rpm%E5%AE%89%E8%A3%85JDK/" class="archive-article-date">
+  	<time datetime="2020-04-10T14:29:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h2 id="一、下载"><a href="#一、下载" class="headerlink" title="一、下载"></a>一、下载</h2><p>官网下载地址：<a href="https://www.oracle.com/java/technologies/javase-downloads.html" target="_blank" rel="noopener">https://www.oracle.com/java/technologies/javase-downloads.html</a></p>
+<p>华为云镜像下载地址：<a href="https://repo.huaweicloud.com/java/jdk/" target="_blank" rel="noopener">https://repo.huaweicloud.com/java/jdk/</a></p>
+        
+          <a class="article-more-a" href="/assets/mdrepository/CentOS%E4%B8%8B%E9%80%9A%E8%BF%87rpm%E5%AE%89%E8%A3%85JDK/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/后端语言//" class="article-tag-list-link color5">后端语言</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/后端语言/Java//" class="article-tag-list-link color5">Java</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assets/mdrepository/CentOS%E4%B8%8B%E9%80%9A%E8%BF%87rpm%E5%AE%89%E8%A3%85JDK/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-JavaScript 比较和逻辑运算符" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assets/mdrepository/JavaScript%20%E6%AF%94%E8%BE%83%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/">JavaScript 比较和逻辑运算符</a>
+    </h1>
+  
+
+        
+        <a href="/assets/mdrepository/JavaScript%20%E6%AF%94%E8%BE%83%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/" class="archive-article-date">
+  	<time datetime="2020-04-10T14:24:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>==</td>
+<td>等于</td>
+</tr>
+<tr>
+<td>===</td>
+<td>值相等并且类型相等</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>不相等</td>
+</tr>
+<tr>
+<td>!==</td>
+<td>值不相等或类型不相等</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>大于</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>小于</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>大于或等于</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>小于或等于</td>
+</tr>
+</tbody></table>
+<hr>
+        
+          <a class="article-more-a" href="/assets/mdrepository/JavaScript%20%E6%AF%94%E8%BE%83%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaScript/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assets/mdrepository/JavaScript%20%E6%AF%94%E8%BE%83%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-jQuery学习笔记(二)-jQuery基本语法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assets/mdrepository/jQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)-jQuery%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">jQuery学习笔记(二)-jQuery基本语法</a>
+    </h1>
+  
+
+        
+        <a href="/assets/mdrepository/jQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)-jQuery%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-04-10T14:13:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h2 id="一、-基本语法"><a href="#一、-基本语法" class="headerlink" title="一、 基本语法"></a>一、 基本语法</h2><p>基础语法：<code>$(selector).action()</code></p>
+<ul>
+<li>$ : 定义 jQuery。是jQuery的简洁写法 , 当$符与其他框架的语法冲突时,可用<strong>jQuery</strong>来代替</li>
+<li>(selector) : 选择器。通过选择器,选取 HTML 元素,选择器的语法与css选择器语法相似</li>
+<li>action(): 执行对元素的操作</li>
+</ul>
+        
+          <a class="article-more-a" href="/assets/mdrepository/jQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)-jQuery%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaScript/jQuery//" class="article-tag-list-link color2">jQuery</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/JavaScript/jQuery/jQuery学习笔记//" class="article-tag-list-link color1">jQuery学习笔记</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assets/mdrepository/jQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%BA%8C)-jQuery%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-jQuery学习笔记(一)-jQuery安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assets/mdrepository/jQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)-jQuery%E5%AE%89%E8%A3%85/">jQuery学习笔记(一)-jQuery安装</a>
+    </h1>
+  
+
+        
+        <a href="/assets/mdrepository/jQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)-jQuery%E5%AE%89%E8%A3%85/" class="archive-article-date">
+  	<time datetime="2020-04-10T14:08:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h1 id="jQuery安装"><a href="#jQuery安装" class="headerlink" title="jQuery安装"></a>jQuery安装</h1><h2 id="一、使用-JS文件"><a href="#一、使用-JS文件" class="headerlink" title="一、使用.JS文件"></a>一、使用.JS文件</h2><p>官网下载地址：<a href="https://jquery.com/download/" target="_blank" rel="noopener">https://jquery.com/download/</a></p>
+<blockquote>
+<p>导入.JS文件</p>
 </blockquote>
-<h3 id="一、Ubuntu"><a href="#一、Ubuntu" class="headerlink" title="一、Ubuntu"></a>一、Ubuntu</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用dpkg命令查看自己需要的软件是否安装</span></span><br><span class="line">dpkg -l | grep libpcre3</span><br><span class="line"><span class="comment"># 若只安装了 libpcre3</span></span><br><span class="line">sudo apt-get install libpcre3-dev</span><br><span class="line"><span class="comment"># 若都没有安装</span></span><br><span class="line">sudo apt-get install libpcre3 libpcre3-dev</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="二、CentOS"><a href="#二、CentOS" class="headerlink" title="二、CentOS"></a>二、CentOS</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install pcre pcre-devel</span><br></pre></td></tr></table></figure>
-
-<hr>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"jquery-1.10.2.min.js"</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br></pre></td></tr></table></figure>
         
-          <a class="article-more-a" href="/assets/mdrepository/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Nginx%E6%97%B6%E6%8A%A5%E9%94%99:the%20HTTP%20rewrite%20module%20requires%20the%20PCRE%20library/#more">more >></a>
+          <a class="article-more-a" href="/assets/mdrepository/jQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)-jQuery%E5%AE%89%E8%A3%85/#more">more >></a>
         
       
 
@@ -327,7 +996,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">jQuery</a>
         		</li>
       		
 		</ul>
@@ -339,15 +1008,15 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关//" class="article-tag-list-link color1">服务器相关</a>
+        			<a href="/categories/JavaScript//" class="article-tag-list-link color1">JavaScript</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关/Nginx//" class="article-tag-list-link color1">Nginx</a>
+        			<a href="/categories/JavaScript/jQuery//" class="article-tag-list-link color2">jQuery</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关/Nginx/Debug//" class="article-tag-list-link color1">Debug</a>
+        			<a href="/categories/JavaScript/jQuery/jQuery学习笔记//" class="article-tag-list-link color1">jQuery学习笔记</a>
         		</li>
       		
 		</ul>
@@ -356,7 +1025,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Nginx%E6%97%B6%E6%8A%A5%E9%94%99:the%20HTTP%20rewrite%20module%20requires%20the%20PCRE%20library/">展开全文 >></a>
+          <a class="article-more-a" href="/assets/mdrepository/jQuery%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)-jQuery%E5%AE%89%E8%A3%85/">展开全文 >></a>
         </p>
       
 
@@ -386,20 +1055,20 @@
 
 
   
-    <article id="post-Linux下安装Nginx时报错:the HTTP cache module requires md5 functions from OpenSSL library" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Windows下安装maven" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Nginx%E6%97%B6%E6%8A%A5%E9%94%99:the%20HTTP%20cache%20module%20requires%20md5%20functions%20from%20OpenSSL%20library/">Linux下安装Nginx时报错:the HTTP cache module requires md5 functions from OpenSSL library</a>
+      <a class="article-title" href="/assets/mdrepository/Windows%E4%B8%8B%E5%AE%89%E8%A3%85maven/">Windows下安装maven</a>
     </h1>
   
 
         
-        <a href="/assets/mdrepository/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Nginx%E6%97%B6%E6%8A%A5%E9%94%99:the%20HTTP%20cache%20module%20requires%20md5%20functions%20from%20OpenSSL%20library/" class="archive-article-date">
-  	<time datetime="2020-04-08T06:00:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
+        <a href="/assets/mdrepository/Windows%E4%B8%8B%E5%AE%89%E8%A3%85maven/" class="archive-article-date">
+  	<time datetime="2020-04-10T14:01:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
 </a>
         
       </header>
@@ -409,17 +1078,11 @@
       
       <!---->
       
-        <blockquote>
-<p>错误原因:缺少相关库包OpenSSL</p>
-</blockquote>
-<h3 id="一、Ubuntu"><a href="#一、Ubuntu" class="headerlink" title="一、Ubuntu"></a>一、Ubuntu</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssl libssl-dev</span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="二、CentOS"><a href="#二、CentOS" class="headerlink" title="二、CentOS"></a>二、CentOS</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install openssl openssl-devel</span><br></pre></td></tr></table></figure>
-
-<hr>
+        <h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p><a href="https://maven.apache.org" target="_blank" rel="noopener">官网网址</a>：<a href="https://maven.apache.org" target="_blank" rel="noopener">https://maven.apache.org</a></p>
+<p><a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">官网下载地址</a>：<a href="https://maven.apache.org/download.cgi" target="_blank" rel="noopener">https://maven.apache.org/download.cgi</a></p>
+<p>注：下载有binary和source的两个版本，binary是编译好的可以直接使用，source是还没编译过的源代码。</p>
         
-          <a class="article-more-a" href="/assets/mdrepository/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Nginx%E6%97%B6%E6%8A%A5%E9%94%99:the%20HTTP%20cache%20module%20requires%20md5%20functions%20from%20OpenSSL%20library/#more">more >></a>
+          <a class="article-more-a" href="/assets/mdrepository/Windows%E4%B8%8B%E5%AE%89%E8%A3%85maven/#more">more >></a>
         
       
 
@@ -433,7 +1096,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Maven</a>
         		</li>
       		
 		</ul>
@@ -445,15 +1108,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关//" class="article-tag-list-link color1">服务器相关</a>
+        			<a href="/categories/开发工具//" class="article-tag-list-link color5">开发工具</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关/Nginx//" class="article-tag-list-link color1">Nginx</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关/Nginx/Debug//" class="article-tag-list-link color1">Debug</a>
+        			<a href="/categories/开发工具/Maven//" class="article-tag-list-link color1">Maven</a>
         		</li>
       		
 		</ul>
@@ -462,7 +1121,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/Linux%E4%B8%8B%E5%AE%89%E8%A3%85Nginx%E6%97%B6%E6%8A%A5%E9%94%99:the%20HTTP%20cache%20module%20requires%20md5%20functions%20from%20OpenSSL%20library/">展开全文 >></a>
+          <a class="article-more-a" href="/assets/mdrepository/Windows%E4%B8%8B%E5%AE%89%E8%A3%85maven/">展开全文 >></a>
         </p>
       
 
@@ -492,20 +1151,20 @@
 
 
   
-    <article id="post-CentOS下安装Nginx" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Ubuntu系统下安装ftp相关客户端工具之Filezilla" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/CentOS%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/">CentOS 下安装 Nginx</a>
+      <a class="article-title" href="/assets/mdrepository/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85ftp%E7%9B%B8%E5%85%B3%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B7%A5%E5%85%B7%E4%B9%8BFilezilla/">Ubuntu系统下安装ftp相关客户端工具之Filezilla</a>
     </h1>
   
 
         
-        <a href="/assets/mdrepository/CentOS%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/" class="archive-article-date">
-  	<time datetime="2020-04-08T05:04:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
+        <a href="/assets/mdrepository/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85ftp%E7%9B%B8%E5%85%B3%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B7%A5%E5%85%B7%E4%B9%8BFilezilla/" class="archive-article-date">
+  	<time datetime="2020-04-10T13:53:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-10</time>
 </a>
         
       </header>
@@ -515,434 +1174,11 @@
       
       <!---->
       
-        <h2 id="一、检查-安装相关依赖"><a href="#一、检查-安装相关依赖" class="headerlink" title="一、检查/安装相关依赖"></a>一、检查/安装相关依赖</h2><p>首先使用 rpm 命令查看自己需要的软件是否安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -qa | grep libname</span><br></pre></td></tr></table></figure>
-
-<p>解决依赖包openssl安装，命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install openssl openssl-devel</span><br></pre></td></tr></table></figure>
-
-<p>解决依赖包pcre安装，命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install pcre pcre-devel</span><br></pre></td></tr></table></figure>
-
-<p>解决依赖包zlib安装，命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install zlib zlib-devel</span><br></pre></td></tr></table></figure>
-
-<p>一次性安装所有依赖</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install make zlib zlib-devel gcc-c++ libtool openssl openssl-devel pcre pcre-devel</span><br></pre></td></tr></table></figure>
-
+        <p>转载自：<a href="https://blog.csdn.net/weixin_42835066/article/details/87628691" target="_blank" rel="noopener">https://blog.csdn.net/weixin_42835066/article/details/87628691</a></p>
 <hr>
+<p>FileZilla是一个免费而且开源的FTP客户端软件，FileZilla共有两种版本：客户端版本(FileZilla Client)、服务器版本(FileZilla Server)。<br><strong>安装filezilla ：直接在终端执行sudo apt-get install filezilla</strong><br>此时安装就完成了</p>
         
-          <a class="article-more-a" href="/assets/mdrepository/CentOS%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关//" class="article-tag-list-link color1">服务器相关</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关/Nginx//" class="article-tag-list-link color1">Nginx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/CentOS%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux编译时报错:C compiler cc is not found" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/Linux%E7%BC%96%E8%AF%91%E6%97%B6%E6%8A%A5%E9%94%99:C%20compiler%20cc%20is%20not%20found/">Linux编译时报错:C compiler cc is not found</a>
-    </h1>
-  
-
-        
-        <a href="/assets/mdrepository/Linux%E7%BC%96%E8%AF%91%E6%97%B6%E6%8A%A5%E9%94%99:C%20compiler%20cc%20is%20not%20found/" class="archive-article-date">
-  	<time datetime="2020-04-08T04:56:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <blockquote>
-<p>错误原因: 未安装 gcc /未使用sudo权限</p>
-</blockquote>
-<hr>
-<h2 id="一、确保使用-sudo-权限"><a href="#一、确保使用-sudo-权限" class="headerlink" title="一、确保使用 sudo 权限"></a>一、确保使用 sudo 权限</h2><p>设置配置信息若不加 sudo 会报错，error: C compiler cc is not found</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 报错 error: C compiler cc is not found</span></span><br><span class="line">./configure --prefix=/usr/<span class="built_in">local</span>/nginx</span><br><span class="line"><span class="comment"># 正确</span></span><br><span class="line">sudo ./configure --prefix=/usr/<span class="built_in">local</span>/nginx</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/assets/mdrepository/Linux%E7%BC%96%E8%AF%91%E6%97%B6%E6%8A%A5%E9%94%99:C%20compiler%20cc%20is%20not%20found/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/操作系统//" class="article-tag-list-link color5">操作系统</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/操作系统/Linux//" class="article-tag-list-link color1">Linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/操作系统/Linux/Debug//" class="article-tag-list-link color1">Debug</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/Linux%E7%BC%96%E8%AF%91%E6%97%B6%E6%8A%A5%E9%94%99:C%20compiler%20cc%20is%20not%20found/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Nginx启动时报错:bind to 80 failed" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/Nginx%E5%90%AF%E5%8A%A8%E6%97%B6%E6%8A%A5%E9%94%99:bind%20to%2080%20failed/">Nginx启动时报错:bind to 80 failed</a>
-    </h1>
-  
-
-        
-        <a href="/assets/mdrepository/Nginx%E5%90%AF%E5%8A%A8%E6%97%B6%E6%8A%A5%E9%94%99:bind%20to%2080%20failed/" class="archive-article-date">
-  	<time datetime="2020-04-08T04:47:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <blockquote>
-<p>错误原因: 80 端口被占用</p>
-</blockquote>
-<hr>
-<p>当使用<code>sudo ./sbin/nginx</code>启动 nginx 时，若 80 端口此时被占用，则会出现报错</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">nginx: [emerg] <span class="built_in">bind</span>() to 0.0.0.0:80 failed (98: Address already <span class="keyword">in</span> use)</span><br><span class="line">nginx: [emerg] <span class="built_in">bind</span>() to 0.0.0.0:80 failed (98: Address already <span class="keyword">in</span> use)</span><br><span class="line">nginx: [emerg] <span class="built_in">bind</span>() to 0.0.0.0:80 failed (98: Address already <span class="keyword">in</span> use)</span><br><span class="line">nginx: [emerg] <span class="built_in">bind</span>() to 0.0.0.0:80 failed (98: Address already <span class="keyword">in</span> use)</span><br><span class="line">nginx: [emerg] <span class="built_in">bind</span>() to 0.0.0.0:80 failed (98: Address already <span class="keyword">in</span> use)</span><br><span class="line">nginx: [emerg] still could not <span class="built_in">bind</span>()</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/assets/mdrepository/Nginx%E5%90%AF%E5%8A%A8%E6%97%B6%E6%8A%A5%E9%94%99:bind%20to%2080%20failed/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关//" class="article-tag-list-link color1">服务器相关</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关/Nginx//" class="article-tag-list-link color1">Nginx</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关/Nginx/Debug//" class="article-tag-list-link color1">Debug</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/Nginx%E5%90%AF%E5%8A%A8%E6%97%B6%E6%8A%A5%E9%94%99:bind%20to%2080%20failed/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Ubuntu下安装Nginx" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/">Ubuntu下安装Nginx</a>
-    </h1>
-  
-
-        
-        <a href="/assets/mdrepository/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/" class="archive-article-date">
-  	<time datetime="2020-04-08T04:42:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <h3 id="一、检查-安装相关依赖"><a href="#一、检查-安装相关依赖" class="headerlink" title="一、检查/安装相关依赖"></a>一、检查/安装相关依赖</h3><p>首先使用dpkg命令查看自己需要的软件是否安装</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg -l | grep libname</span><br></pre></td></tr></table></figure>
-
-<p>解决依赖包openssl安装，命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install openssl libssl-dev</span><br></pre></td></tr></table></figure>
-
-<p>解决依赖包pcre安装，命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libpcre3 libpcre3-dev</span><br></pre></td></tr></table></figure>
-
-<p>解决依赖包zlib安装，命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install zlib1g-dev</span><br></pre></td></tr></table></figure>
-
-<hr>
-        
-          <a class="article-more-a" href="/assets/mdrepository/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Nginx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关//" class="article-tag-list-link color1">服务器相关</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/服务器相关/Nginx//" class="article-tag-list-link color1">Nginx</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/Ubuntu%E4%B8%8B%E5%AE%89%E8%A3%85Nginx/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Ubuntu通过SSH连接云服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/Ubuntu%E9%80%9A%E8%BF%87SSH%E8%BF%9E%E6%8E%A5%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">Ubuntu通过SSH连接云服务器</a>
-    </h1>
-  
-
-        
-        <a href="/assets/mdrepository/Ubuntu%E9%80%9A%E8%BF%87SSH%E8%BF%9E%E6%8E%A5%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2020-04-08T04:28:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <p>转载自<a href="https://blog.csdn.net/qq_23478649/article/details/78761089" target="_blank" rel="noopener">ubuntu16.04 SSH连接云服务器</a></p>
-<hr>
-<h3 id="一、安装SSH的服务器端"><a href="#一、安装SSH的服务器端" class="headerlink" title="一、安装SSH的服务器端"></a>一、安装SSH的服务器端</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install openssh-server</span><br></pre></td></tr></table></figure>
-
-<h4 id="二、启动ssh-server"><a href="#二、启动ssh-server" class="headerlink" title="二、启动ssh-server"></a>二、启动ssh-server</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ /etc/init.d/ssh restart</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/assets/mdrepository/Ubuntu%E9%80%9A%E8%BF%87SSH%E8%BF%9E%E6%8E%A5%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/#more">more >></a>
+          <a class="article-more-a" href="/assets/mdrepository/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85ftp%E7%9B%B8%E5%85%B3%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B7%A5%E5%85%B7%E4%B9%8BFilezilla/#more">more >></a>
         
       
 
@@ -981,201 +1217,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/Ubuntu%E9%80%9A%E8%BF%87SSH%E8%BF%9E%E6%8E%A5%E4%BA%91%E6%9C%8D%E5%8A%A1%E5%99%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Ubuntu搭建SSR服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/Ubuntu%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/">Ubuntu搭建SSR代理服务器</a>
-    </h1>
-  
-
-        
-        <a href="/assets/mdrepository/Ubuntu%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/" class="archive-article-date">
-  	<time datetime="2020-04-08T04:10:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <blockquote>
-<p>本文讲解如何在Ubuntu上搭建SSR代理服务器</p>
-</blockquote>
-<h3 id="0-安装SSR代理软件"><a href="#0-安装SSR代理软件" class="headerlink" title="0. 安装SSR代理软件"></a>0. 安装SSR代理软件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;ToyoDAdoubi&#x2F;doubi&#x2F;master&#x2F;ssr.sh &amp;&amp; chmod +x ssr.sh &amp;&amp; bash ssr.sh</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/assets/mdrepository/Ubuntu%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">科学上网</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/科学上网//" class="article-tag-list-link color5">科学上网</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/科学上网/SSR//" class="article-tag-list-link color4">SSR</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/Ubuntu%E6%90%AD%E5%BB%BASSR%E6%9C%8D%E5%8A%A1%E5%99%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Ubuntu安装SSR" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/Ubuntu%E5%AE%89%E8%A3%85SSR/">Ubuntu下安装SSR</a>
-    </h1>
-  
-
-        
-        <a href="/assets/mdrepository/Ubuntu%E5%AE%89%E8%A3%85SSR/" class="archive-article-date">
-  	<time datetime="2020-04-08T03:56:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <blockquote>
-<p>本文讲解如何在Ubuntu上安装并使用SSR客户端工具</p>
-</blockquote>
-<h3 id="0-SSR的原理"><a href="#0-SSR的原理" class="headerlink" title="0.SSR的原理"></a>0.SSR的原理</h3>
-        
-          <a class="article-more-a" href="/assets/mdrepository/Ubuntu%E5%AE%89%E8%A3%85SSR/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">科学上网</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/科学上网//" class="article-tag-list-link color5">科学上网</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/科学上网/SSR//" class="article-tag-list-link color4">SSR</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/Ubuntu%E5%AE%89%E8%A3%85SSR/">展开全文 >></a>
+          <a class="article-more-a" href="/assets/mdrepository/Ubuntu%E7%B3%BB%E7%BB%9F%E4%B8%8B%E5%AE%89%E8%A3%85ftp%E7%9B%B8%E5%85%B3%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%B7%A5%E5%85%B7%E4%B9%8BFilezilla/">展开全文 >></a>
         </p>
       
 
@@ -1207,7 +1249,7 @@
   
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
+      <a class="extend prev" rel="prev" href="/page/2/">上一页</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="page-number" href="/page/6/">6</a><a class="extend next" rel="next" href="/page/4/">下一页</a>
     </nav>
   
 
@@ -1301,11 +1343,35 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color1">C/C++</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Vsftpd</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Eclipse</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1317,11 +1383,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color3">Android</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1341,10 +1403,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">C/C++</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">服务器相关工具</a>
               </li>
              
@@ -1354,6 +1412,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Maven</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">Node.js</a>
               </li>
              
               <li class="article-tag-list-item">
