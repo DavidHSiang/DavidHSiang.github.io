@@ -16,7 +16,7 @@
 <meta property="og:description" content="本文摘录自:  终于搞懂了回车与换行的区别:https:&#x2F;&#x2F;www.pythontab.com&#x2F;html&#x2F;2017&#x2F;linuxkaiyuan_0115&#x2F;1116.html 回车与换行的区别:https:&#x2F;&#x2F;blog.csdn.net&#x2F;u011982340&#x2F;article&#x2F;details&#x2F;39268179  关于换行和回车其实平时我们不太在意，所以关于两者的区别也不太清楚，在平时开发时可能会遇到一些">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-23T11:37:36.000Z">
-<meta property="article:modified_time" content="2020-04-23T11:39:59.913Z">
+<meta property="article:modified_time" content="2020-04-23T12:31:12.700Z">
 <meta property="article:author" content="DavidHSiang">
 <meta property="article:tag" content="编程相关概念">
 <meta name="twitter:card" content="summary">
@@ -235,6 +235,7 @@
 <p>软回车是用 Shift + Enter 产生的，它换行，但是并不换段，即前后两段文字在 Word 中属于同一“段”。在应用格式时你会体会到这一点。</p>
 <p>软回车能使前后两行的行间距大幅度缩小，因为它不是段落标记，要和法定的段落标记——硬回车区别出来。硬回车的html代码是<code>&lt;p&gt;..&lt;/p&gt;</code>，段落的内容就夹在里面，而软回车的代码很精悍：<code>&lt;br&gt;</code>。网页的文字如果复制到word中，则硬回车变为弯曲的箭头，软回车变为向下的箭头。</p>
 <h2 id="4-编程中的回车与换行"><a href="#4-编程中的回车与换行" class="headerlink" title="4.编程中的回车与换行"></a>4.编程中的回车与换行</h2><p>在编程时, 为了程序的可移植性, 编译器或解释器会帮我们完成不同行末结束符之间的转换.</p>
+<p>在编程时, \n 表示光标移动到<strong>下行首</strong>, \r 表示 光标移动到<strong>本行首</strong></p>
 <p><strong>例如</strong>: </p>
 <p>c++语言编程时（windows系统）</p>
 <p>\r 就是回到本行行首, 这就会把这一行以前的输出覆盖掉, 如：</p>
@@ -378,6 +379,15 @@
   
 <nav id="article-nav">
   
+    <a href="/assets/mdrepository/Hexo-theme-yilia%E5%BC%82%E5%B8%B8Cannot%20read%20property%20'length'%20of%20undefined/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Hexo-theme-yilia异常Cannot read property &#39;length&#39; of undefined
+        
+      </div>
+    </a>
+  
   
     <a href="/assets/mdrepository/Python%E6%B5%B7%E9%BE%9F%E7%BB%98%E5%9B%BE-turtle%E5%BA%93%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0(%E4%B8%80)/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">Python海龟绘图-turtle库学习笔记(一)</div>
@@ -518,7 +528,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">C/C++</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -526,7 +536,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color1">C/C++</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -534,11 +544,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -546,19 +556,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">HTML</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">编程相关概念</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">JavaScript</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -594,11 +604,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
+                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">科学上网</a>
+                <a href="javascript:void(0)" class="js-tag color2">Tomcat</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -607,6 +617,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">BIOS</a>
               </li>
              
               <li class="article-tag-list-item">
