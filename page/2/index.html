@@ -186,6 +186,769 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-spring-oxm入门示例" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assets/mdrepository/spring-oxm%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B/">spring-oxm入门示例</a>
+    </h1>
+  
+
+        
+        <a href="/assets/mdrepository/spring-oxm%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B/" class="archive-article-date">
+  	<time datetime="2020-05-18T14:41:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <p>转载自<a href="https://blog.csdn.net/xiang__liu/article/details/81191850" target="_blank" rel="noopener">Spring oxm入门实例</a>: <a href="https://blog.csdn.net/xiang__liu/article/details/81191850" target="_blank" rel="noopener">https://blog.csdn.net/xiang__liu/article/details/81191850</a></p>
+<h2 id="O-X-Mapper-是什么？"><a href="#O-X-Mapper-是什么？" class="headerlink" title="O/X Mapper 是什么？"></a>O/X Mapper 是什么？</h2><p>Spring 3.0 的一个新特性是 O/X Mapper。O/X 映射器这个概念并不新鲜，O 代表 Object，X 代表 XML。它的目的是在 Java 对象（几乎总是一个 plain old Java object，或简写为 POJO）和 XML 文档之间来回转换。</p>
+<p>例 如，您可能有一个带有几个属性的简单 bean，且您的业务需要将那个 Java 对象转换为一个 XML 文档。Spring 的 O/X  Mapper 能够为您解决那个问题。如果反过来，您需要将一个 XML 文档转换为一个简单 Java bean，Spring 的 O/X  Mapper 也能胜任。</p>
+<p>有一点需要注意：Spring O/X Mapper 只是定义由流行的第三方框架实现的统一的界面。要利用 Spring 的 O/X 功能，您需要一个在 Java 对象和  XML 之间来回转换的实用程序。Castor 就是这样一个流行的第三方工具，本文将使用这个工具。其他这样的工具包括 XMLBeans、Java  Architecture for XML Binding (JAXB)、JiBX 和 XStream。</p>
+<p><strong>注意: 在Spring5版本后, spring-oxm不再支持Castor这个工具</strong>。为了演示方便, 本文采用Castor工具, 以及Spring4版本</p>
+<blockquote>
+<p>总结:</p>
+<p>​        oxm(o/xMapping)是spring 3.0的一个新特性, 它的功能是<strong>实体类与xml之间的相互转换</strong></p>
+</blockquote>
+        
+          <a class="article-more-a" href="/assets/mdrepository/spring-oxm%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-tag tagcloud">
+        <i class="icon-price-tags icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color2">
+                            Spring
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+    <div class="article-category tagcloud">
+        <i class="icon-book icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/开发框架//" class="article-tag-list-link color5">
+                            开发框架
+                        </a>
+                    </li>
+                    
+                        
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/开发框架/Spring//" class="article-tag-list-link color2">
+                            Spring
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assets/mdrepository/spring-oxm%E5%85%A5%E9%97%A8%E7%A4%BA%E4%BE%8B/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-idea创建Maven项目时Maven插件内看不到mybatis-generator" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assets/mdrepository/idea%E5%88%9B%E5%BB%BAMaven%E9%A1%B9%E7%9B%AE%E6%97%B6Maven%E6%8F%92%E4%BB%B6%E5%86%85%E7%9C%8B%E4%B8%8D%E5%88%B0mybatis-generator/">idea创建Maven项目时Maven插件内看不到mybatis-generator</a>
+    </h1>
+  
+
+        
+        <a href="/assets/mdrepository/idea%E5%88%9B%E5%BB%BAMaven%E9%A1%B9%E7%9B%AE%E6%97%B6Maven%E6%8F%92%E4%BB%B6%E5%86%85%E7%9C%8B%E4%B8%8D%E5%88%B0mybatis-generator/" class="archive-article-date">
+  	<time datetime="2020-05-18T13:25:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <p>创建Maven项目时插件配置添加了mybatis-generator但是右侧maven project始终没有看到插件</p>
+        
+          <a class="article-more-a" href="/assets/mdrepository/idea%E5%88%9B%E5%BB%BAMaven%E9%A1%B9%E7%9B%AE%E6%97%B6Maven%E6%8F%92%E4%BB%B6%E5%86%85%E7%9C%8B%E4%B8%8D%E5%88%B0mybatis-generator/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-tag tagcloud">
+        <i class="icon-price-tags icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color1">
+                            Maven
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+    <div class="article-category tagcloud">
+        <i class="icon-book icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/开发框架//" class="article-tag-list-link color5">
+                            开发框架
+                        </a>
+                    </li>
+                    
+                        
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/开发框架/Mybatis-generator//" class="article-tag-list-link color3">
+                            Mybatis-generator
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assets/mdrepository/idea%E5%88%9B%E5%BB%BAMaven%E9%A1%B9%E7%9B%AE%E6%97%B6Maven%E6%8F%92%E4%BB%B6%E5%86%85%E7%9C%8B%E4%B8%8D%E5%88%B0mybatis-generator/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-pod指令下载中遇到的一些问题及解决方法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assets/mdrepository/pod%E6%8C%87%E4%BB%A4%E4%B8%8B%E8%BD%BD%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">pod指令下载中遇到的一些问题及解决方法</a>
+    </h1>
+  
+
+        
+        <a href="/assets/mdrepository/pod%E6%8C%87%E4%BB%A4%E4%B8%8B%E8%BD%BD%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-05-18T04:38:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h2 id="一、报错-CDN-trunk-Repo-update-failed"><a href="#一、报错-CDN-trunk-Repo-update-failed" class="headerlink" title="一、报错 [!] CDN: trunk Repo update failed"></a>一、报错 [!] CDN: trunk Repo update failed</h2><blockquote>
+<p>解决办法：</p>
+</blockquote>
+<h3 id="1-podfile文件中指定source源为master："><a href="#1-podfile文件中指定source源为master：" class="headerlink" title="1.podfile文件中指定source源为master："></a>1.podfile文件中指定source源为master：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> <span class="string">'https://github.com/CocoaPods/Specs.git'</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-移除trunk源"><a href="#2-移除trunk源" class="headerlink" title="2.移除trunk源"></a>2.移除trunk源</h3><p>执行<code>pod repo remove trunk</code>移除trunk源。执行完后，<code>pod search</code>就都正常了！</p>
+        
+          <a class="article-more-a" href="/assets/mdrepository/pod%E6%8C%87%E4%BB%A4%E4%B8%8B%E8%BD%BD%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-tag tagcloud">
+        <i class="icon-price-tags icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color4">
+                            IOS
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+    <div class="article-category tagcloud">
+        <i class="icon-book icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/移动开发//" class="article-tag-list-link color5">
+                            移动开发
+                        </a>
+                    </li>
+                    
+                        
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/移动开发/IOS//" class="article-tag-list-link color4">
+                            IOS
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assets/mdrepository/pod%E6%8C%87%E4%BB%A4%E4%B8%8B%E8%BD%BD%E4%B8%AD%E9%81%87%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-慕课网SSM电商网站HappyMmall开发笔记(二)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assets/mdrepository/%E6%85%95%E8%AF%BE%E7%BD%91SSM%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99HappyMmall%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0(%E4%BA%8C)/">慕课网SSM电商网站HappyMmall开发笔记(二)</a>
+    </h1>
+  
+
+        
+        <a href="/assets/mdrepository/%E6%85%95%E8%AF%BE%E7%BD%91SSM%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99HappyMmall%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0(%E4%BA%8C)/" class="archive-article-date">
+  	<time datetime="2020-05-16T14:09:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-16</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h2 id="一、前文回顾"><a href="#一、前文回顾" class="headerlink" title="一、前文回顾"></a>一、前文回顾</h2><p>在笔记(一)中, 主要实现了: 数据表的设计与创建、创建Web工程、git初始化</p>
+<p>本文主要实现了pom文件的基本配置<!--待更--></p>
+        
+          <a class="article-more-a" href="/assets/mdrepository/%E6%85%95%E8%AF%BE%E7%BD%91SSM%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99HappyMmall%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0(%E4%BA%8C)/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-tag tagcloud">
+        <i class="icon-price-tags icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color1">
+                            慕课网SSM电商网站
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+    <div class="article-category tagcloud">
+        <i class="icon-book icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/开发笔记//" class="article-tag-list-link color5">
+                            开发笔记
+                        </a>
+                    </li>
+                    
+                        
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/开发笔记/慕课网SSM电商网站//" class="article-tag-list-link color1">
+                            慕课网SSM电商网站
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assets/mdrepository/%E6%85%95%E8%AF%BE%E7%BD%91SSM%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99HappyMmall%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0(%E4%BA%8C)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-慕课网SSM电商网站HappyMmall开发笔记(一)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assets/mdrepository/%E6%85%95%E8%AF%BE%E7%BD%91SSM%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99HappyMmall%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0(%E4%B8%80)/">慕课网SSM电商网站HappyMmall开发笔记(一)</a>
+    </h1>
+  
+
+        
+        <a href="/assets/mdrepository/%E6%85%95%E8%AF%BE%E7%BD%91SSM%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99HappyMmall%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0(%E4%B8%80)/" class="archive-article-date">
+  	<time datetime="2020-05-14T15:10:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h2 id="一、项目概述"><a href="#一、项目概述" class="headerlink" title="一、项目概述"></a>一、项目概述</h2><h3 id="1-项目介绍"><a href="#1-项目介绍" class="headerlink" title="(1)项目介绍"></a>(1)项目介绍</h3><p>慕课网SSM电商网站HappyMmall,是慕课网<a href="https://www.imooc.com/t/2705746" target="_blank" rel="noopener">Geely</a>老师的一个实战教程.</p>
+<p>这个项目用到了下面几个知识:<!--待更--></p>
+<ul>
+<li>基础框架-ssm(SpringMVC+Spring+MyBatis)</li>
+<li>数据库-MySQL</li>
+<li>项目的依赖管理-Maven</li>
+<li>分页-pagehelper</li>
+<li>逆向工程-MyBatis Generator</li>
+</ul>
+<p>课程视频的网址:<a href="https://coding.imooc.com/learn/list/96.html" target="_blank" rel="noopener">https://coding.imooc.com/learn/list/96.html</a></p>
+<p>项目github: <a href="https://github.com/DavidHSiang/mmall" target="_blank" rel="noopener">https://github.com/DavidHSiang/mmall</a></p>
+<h3 id="2-功能介绍"><a href="#2-功能介绍" class="headerlink" title="(2)功能介绍"></a>(2)功能介绍</h3><p>项目演示网址:</p>
+<ul>
+<li>前台网址:<a href="http://happymmall.com/index.html" target="_blank" rel="noopener">http://happymmall.com/index.html</a></li>
+<li>后台网址:<a href="http://admin.happymmall.com/#/home/index" target="_blank" rel="noopener">http://admin.happymmall.com/#/home/index</a></li>
+</ul>
+        
+          <a class="article-more-a" href="/assets/mdrepository/%E6%85%95%E8%AF%BE%E7%BD%91SSM%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99HappyMmall%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0(%E4%B8%80)/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-tag tagcloud">
+        <i class="icon-price-tags icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color1">
+                            慕课网SSM电商网站
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+    <div class="article-category tagcloud">
+        <i class="icon-book icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/开发笔记//" class="article-tag-list-link color5">
+                            开发笔记
+                        </a>
+                    </li>
+                    
+                        
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/开发笔记/慕课网SSM电商网站//" class="article-tag-list-link color1">
+                            慕课网SSM电商网站
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assets/mdrepository/%E6%85%95%E8%AF%BE%E7%BD%91SSM%E7%94%B5%E5%95%86%E7%BD%91%E7%AB%99HappyMmall%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0(%E4%B8%80)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-解决Hexo标题英文自动大写的问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assets/mdrepository/%E8%A7%A3%E5%86%B3Hexo%E6%A0%87%E9%A2%98%E8%8B%B1%E6%96%87%E8%87%AA%E5%8A%A8%E5%A4%A7%E5%86%99%E7%9A%84%E9%97%AE%E9%A2%98/">解决Hexo标题英文自动大写的问题</a>
+    </h1>
+  
+
+        
+        <a href="/assets/mdrepository/%E8%A7%A3%E5%86%B3Hexo%E6%A0%87%E9%A2%98%E8%8B%B1%E6%96%87%E8%87%AA%E5%8A%A8%E5%A4%A7%E5%86%99%E7%9A%84%E9%97%AE%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2020-05-11T03:52:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-11</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>去主题的 css 文件中找 <code>text-transform</code> 这个属性, 将所有<code>text-transform</code> 的属性值改为None</p>
+<h2 id="CSS-text-transform-属性"><a href="#CSS-text-transform-属性" class="headerlink" title="CSS text-transform 属性"></a>CSS text-transform 属性</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*将标签中的英文全部转换为大写*/</span></span><br><span class="line"><span class="selector-tag">text-transform</span><span class="selector-pseudo">:uppercase</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*将标签中的每个英文单词的第一个字母全部转换为大写*/</span></span><br><span class="line"><span class="selector-tag">text-transform</span><span class="selector-pseudo">:capitalize</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*将标签中的英文全部转换为小写*/</span></span><br><span class="line"><span class="selector-tag">text-transform</span><span class="selector-pseudo">:lowercase</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*不改变大小写*/</span></span><br><span class="line"><span class="selector-tag">text-transform</span><span class="selector-pseudo">:None</span>;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-tag tagcloud">
+        <i class="icon-price-tags icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color5">
+                            Hexo
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+    <div class="article-category tagcloud">
+        <i class="icon-book icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/网站建设//" class="article-tag-list-link color5">
+                            网站建设
+                        </a>
+                    </li>
+                    
+                        
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/网站建设/Hexo//" class="article-tag-list-link color5">
+                            Hexo
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assets/mdrepository/%E8%A7%A3%E5%86%B3Hexo%E6%A0%87%E9%A2%98%E8%8B%B1%E6%96%87%E8%87%AA%E5%8A%A8%E5%A4%A7%E5%86%99%E7%9A%84%E9%97%AE%E9%A2%98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-尚硅谷SSM员工管理系统开发笔记(二)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/assets/mdrepository/%E5%B0%9A%E7%A1%85%E8%B0%B7SSM%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0(%E4%BA%8C)/">尚硅谷SSM员工管理系统开发笔记(二)</a>
+    </h1>
+  
+
+        
+        <a href="/assets/mdrepository/%E5%B0%9A%E7%A1%85%E8%B0%B7SSM%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0(%E4%BA%8C)/" class="archive-article-date">
+  	<time datetime="2020-05-10T15:29:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      <!--添加tags-->
+      
+      <!---->
+      
+        <h2 id="前文回顾"><a href="#前文回顾" class="headerlink" title="前文回顾"></a>前文回顾</h2><p>在<a href="https://davidhsiang.github.io/assets/mdrepository/%E5%B0%9A%E7%A1%85%E8%B0%B7SSM%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0(%E4%B8%80)/">尚硅谷SSM员工管理系统开发笔记(一)</a>中, 介绍了本项目的内容以及基础的环境搭建, 其中包括SSM依赖导入、SSM配置文件编写、Mybatis反向工程等。在本文中主要介绍实现联合查询与测试SSM环境是否搭建成功</p>
+<h2 id="一、修改JavaBean与Mapper-实现联合查询"><a href="#一、修改JavaBean与Mapper-实现联合查询" class="headerlink" title="一、修改JavaBean与Mapper,实现联合查询"></a>一、修改JavaBean与Mapper,实现联合查询</h2><p>在这个项目中我们用到了两张表: <em>员工表</em> 和 <em>部门表<em>。</em>部门表</em> 和 <em>员工表</em> 属于一对多的关系, 一个部门有多个员工, 多个员工对应一个部门。而反向工程生成的JavaBean与Mapper并没有为我们实现联合查询。因此我们需要修改默认生成的JavaBean与Mapper。对于这个工程来说, 要实现的功能是对员工的CRUD操作, 而并没有对于部门的CRUD操作。因此只需要修改Employee的Bean和Mapper即可。</p>
+        
+          <a class="article-more-a" href="/assets/mdrepository/%E5%B0%9A%E7%A1%85%E8%B0%B7SSM%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0(%E4%BA%8C)/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-tag tagcloud">
+        <i class="icon-price-tags icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color3">
+                            尚硅谷SSM员工管理系统
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+    <div class="article-category tagcloud">
+        <i class="icon-book icon"></i>
+        <ul class="article-tag-list">
+            
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/开发笔记//" class="article-tag-list-link color5">
+                            开发笔记
+                        </a>
+                    </li>
+                    
+                        
+                
+                    <li class="article-tag-list-item">
+                        <a href="/categories/开发笔记/尚硅谷SSM员工管理系统//" class="article-tag-list-link color3">
+                            尚硅谷SSM员工管理系统
+                        </a>
+                    </li>
+                    
+                        
+        </ul>
+    </div>
+    
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/assets/mdrepository/%E5%B0%9A%E7%A1%85%E8%B0%B7SSM%E5%91%98%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0(%E4%BA%8C)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-尚硅谷SSM员工管理系统开发笔记(一)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -530,906 +1293,9 @@
 
 
   
-    <article id="post-大数类-解决Java浮点数运算精度损失问题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/%E5%A4%A7%E6%95%B0%E7%B1%BB-%E8%A7%A3%E5%86%B3Java%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97%E7%B2%BE%E5%BA%A6%E6%8D%9F%E5%A4%B1%E9%97%AE%E9%A2%98/">大数类-解决Java浮点数运算精度损失问题</a>
-    </h1>
-  
-
-        
-        <a href="/assets/mdrepository/%E5%A4%A7%E6%95%B0%E7%B1%BB-%E8%A7%A3%E5%86%B3Java%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97%E7%B2%BE%E5%BA%A6%E6%8D%9F%E5%A4%B1%E9%97%AE%E9%A2%98/" class="archive-article-date">
-  	<time datetime="2020-05-08T09:07:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <h2 id="一、Java浮点数运算损失精度问题描述"><a href="#一、Java浮点数运算损失精度问题描述" class="headerlink" title="一、Java浮点数运算损失精度问题描述"></a>一、Java浮点数运算损失精度问题描述</h2><p>在Java中, 浮点数的运算存在着误差. 例如: 0.1 + 0.2 的结果并非0.3 ,而是0.30000000000000004</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jshell&gt; <span class="number">0.1</span> + <span class="number">0.2</span></span><br><span class="line">$<span class="number">1</span> ==&gt; <span class="number">0.30000000000000004</span></span><br></pre></td></tr></table></figure>
-
-<p>这是因为, 在计算机内部, 浮点数是由二进制表示的, 而在二进制中无法精确的表示1/10 (这就好像在十进制中无法精确的表示1/3一样)</p>
-<p>若要解决这个问题, 有两种方式,一是<strong>四舍五入</strong>, 二是使用<strong>大数类</strong></p>
-<p>使用四舍五入有可能会带来误差,若在数值计算中, 不允许有任何舍入误差,就应该使用<strong>大数类</strong></p>
-        
-          <a class="article-more-a" href="/assets/mdrepository/%E5%A4%A7%E6%95%B0%E7%B1%BB-%E8%A7%A3%E5%86%B3Java%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97%E7%B2%BE%E5%BA%A6%E6%8D%9F%E5%A4%B1%E9%97%AE%E9%A2%98/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-tag tagcloud">
-        <i class="icon-price-tags icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color5">
-                            Java
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-    <div class="article-category tagcloud">
-        <i class="icon-book icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/后端语言//" class="article-tag-list-link color5">
-                            后端语言
-                        </a>
-                    </li>
-                    
-                        
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/后端语言/Java//" class="article-tag-list-link color5">
-                            Java
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/%E5%A4%A7%E6%95%B0%E7%B1%BB-%E8%A7%A3%E5%86%B3Java%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BF%90%E7%AE%97%E7%B2%BE%E5%BA%A6%E6%8D%9F%E5%A4%B1%E9%97%AE%E9%A2%98/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-JShell-Java9新增编程工具" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/JShell-Java9%E6%96%B0%E5%A2%9E%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/">JShell-Java9新增编程工具</a>
-    </h1>
-  
-
-        
-        <a href="/assets/mdrepository/JShell-Java9%E6%96%B0%E5%A2%9E%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/" class="archive-article-date">
-  	<time datetime="2020-05-08T08:40:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <h2 id="JShell简介"><a href="#JShell简介" class="headerlink" title="JShell简介"></a>JShell简介</h2><p>JShell是Java 9 新增的一个交互式的编程环境工具。它这是Java提供的交互式的编程环境。可以使java想Python一样, 直接输入表达式并查看其执行结果</p>
-<h2 id="相关操作"><a href="#相关操作" class="headerlink" title="相关操作"></a>相关操作</h2><h3 id="启动JShell"><a href="#启动JShell" class="headerlink" title="启动JShell"></a>启动JShell</h3><p>想要使用JShell,只需在命令行键入命令<code>jshell</code>即可, 需要注意的是,要确保本机安装了JDK且版本在Java 9 及以上</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">~$ jshell</span><br><span class="line">|  欢迎使用 JShell -- 版本 11.0.7</span><br><span class="line">|  要大致了解该版本, 请键入: /<span class="built_in">help</span> intro</span><br><span class="line"></span><br><span class="line">jshell&gt;</span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/assets/mdrepository/JShell-Java9%E6%96%B0%E5%A2%9E%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-tag tagcloud">
-        <i class="icon-price-tags icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color5">
-                            Java
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-    <div class="article-category tagcloud">
-        <i class="icon-book icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/后端语言//" class="article-tag-list-link color5">
-                            后端语言
-                        </a>
-                    </li>
-                    
-                        
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/后端语言/Java//" class="article-tag-list-link color5">
-                            Java
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/JShell-Java9%E6%96%B0%E5%A2%9E%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-使用命令行编译运行Java程序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8CJava%E7%A8%8B%E5%BA%8F/">使用命令行编译运行Java程序</a>
-    </h1>
-  
-
-        
-        <a href="/assets/mdrepository/%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8CJava%E7%A8%8B%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2020-05-08T06:58:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <h2 id="一、检查JDK安装"><a href="#一、检查JDK安装" class="headerlink" title="一、检查JDK安装"></a>一、检查JDK安装</h2><p>查看javac(java编译器)的版本</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac --version</span><br></pre></td></tr></table></figure>
-
-<p>若显示找不到指令,首先查看java版本:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java --version</span><br></pre></td></tr></table></figure>
-
-<p>若Java版本无显示,则先检查JDK是否安装, 若JDK已经安装了,查看环境变量是否配置正确</p>
-<p>若Java版本有显示,那么有可能是因为只安装了JRE(Java运行时环境)而没有安装JDK(Java开发环境),首先查看Java安装路径</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">java -verbose</span><br><span class="line">[0.006s][info][class,load] opened: /usr/lib/jvm/java-11-openjdk-amd64/lib/modules</span><br><span class="line">[0.006s][info][class,load] opened: /usr/share/java/java-atk-wrapper.jar</span><br><span class="line">[0.026s][info][class,load] java.lang.Object <span class="built_in">source</span>: shared objects file</span><br><span class="line">[0.026s][info][class,load] java.io.Serializable <span class="built_in">source</span>: shared objects file</span><br><span class="line">[0.026s][info][class,load] java.lang.Comparable <span class="built_in">source</span>: shared objects file</span><br><span class="line">[0.026s][info][class,load] java.lang.CharSequence <span class="built_in">source</span>: shared objects file</span><br><span class="line">......</span><br></pre></td></tr></table></figure>
-
-<p>查看Java安装路径下的bin目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls /usr/lib/jvm/java-11-openjdk-amd64/bin/</span><br></pre></td></tr></table></figure>
-
-<p>若bin目录下没有<code>javac</code>这个文件,则说明只安装了JRE, 需要再安装JDK. 在Windows下,安装JDK可通过官网下载安装包进行安装, 在Linux下可以通过<code>apt</code>或<code>yum</code>进行安装:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install default-jdk            jianc</span><br><span class="line">sudo apt install openjdk-11-jdk-headless</span><br><span class="line">sudo apt install ecj                    </span><br><span class="line">sudo apt install openjdk-8-jdk-headless</span><br></pre></td></tr></table></figure>
-
-<p>若bin目录下有<code>javac</code>这个文件,则要检查环境变量的配置, 如果还不行就重新安装JDK</p>
-        
-          <a class="article-more-a" href="/assets/mdrepository/%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8CJava%E7%A8%8B%E5%BA%8F/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-tag tagcloud">
-        <i class="icon-price-tags icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color5">
-                            Java
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-    <div class="article-category tagcloud">
-        <i class="icon-book icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/后端语言//" class="article-tag-list-link color5">
-                            后端语言
-                        </a>
-                    </li>
-                    
-                        
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/后端语言/Java//" class="article-tag-list-link color5">
-                            Java
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%BC%96%E8%AF%91%E8%BF%90%E8%A1%8CJava%E7%A8%8B%E5%BA%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java语言的演进" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/Java%E8%AF%AD%E8%A8%80%E7%9A%84%E6%BC%94%E8%BF%9B/">Java语言的演进</a>
-    </h1>
-  
-
-        
-        <a href="/assets/mdrepository/Java%E8%AF%AD%E8%A8%80%E7%9A%84%E6%BC%94%E8%BF%9B/" class="archive-article-date">
-  	<time datetime="2020-05-08T06:21:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <table>
-<thead>
-<tr>
-<th>版本</th>
-<th>年份</th>
-<th>新语言特性</th>
-<th>类与接口数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>1.0</td>
-<td>1996</td>
-<td>语言本身</td>
-<td>211</td>
-</tr>
-<tr>
-<td>1.1</td>
-<td>1997</td>
-<td>内部类</td>
-<td>477</td>
-</tr>
-<tr>
-<td>1.2</td>
-<td>1998</td>
-<td>strictfp修饰符</td>
-<td>1524</td>
-</tr>
-<tr>
-<td>1.3</td>
-<td>2000</td>
-<td>无</td>
-<td>1840</td>
-</tr>
-<tr>
-<td>1.4</td>
-<td>2002</td>
-<td>断言</td>
-<td>2723</td>
-</tr>
-<tr>
-<td>5.0</td>
-<td>2004</td>
-<td>泛型类、for each循环、可变元参数、自动装箱、元数据、枚举、静态导入</td>
-<td>3279</td>
-</tr>
-<tr>
-<td>6</td>
-<td>2006</td>
-<td>无</td>
-<td>3793</td>
-</tr>
-<tr>
-<td>7</td>
-<td>2011</td>
-<td>基于字符串的选择语句、菱形运算符、二进制字面量、异常处理增强</td>
-<td>4024</td>
-</tr>
-<tr>
-<td>8</td>
-<td>2014</td>
-<td>lambda表达式、包含默认方法的接口、流和日期/时间库</td>
-<td>4240</td>
-</tr>
-<tr>
-<td>9</td>
-<td>2017</td>
-<td>模块、其他的语言和类库增强</td>
-<td>6005</td>
-</tr>
-</tbody></table>
-<h2 id="参考文档"><a href="#参考文档" class="headerlink" title="参考文档"></a>参考文档</h2><p><a href="#">Java核心编程~卷一-第一章1.4</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-tag tagcloud">
-        <i class="icon-price-tags icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color5">
-                            Java
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-    <div class="article-category tagcloud">
-        <i class="icon-book icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/后端语言//" class="article-tag-list-link color5">
-                            后端语言
-                        </a>
-                    </li>
-                    
-                        
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/后端语言/Java//" class="article-tag-list-link color5">
-                            Java
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/Java%E8%AF%AD%E8%A8%80%E7%9A%84%E6%BC%94%E8%BF%9B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java工具包&amp;版本的相关术语" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/Java%E5%B7%A5%E5%85%B7%E5%8C%85&%E7%89%88%E6%9C%AC%E7%9A%84%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD/">Java工具包&amp;版本的相关术语</a>
-    </h1>
-  
-
-        
-        <a href="/assets/mdrepository/Java%E5%B7%A5%E5%85%B7%E5%8C%85&%E7%89%88%E6%9C%AC%E7%9A%84%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD/" class="archive-article-date">
-  	<time datetime="2020-05-08T05:58:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <h2 id="Java术语"><a href="#Java术语" class="headerlink" title="Java术语"></a>Java术语</h2><table>
-<thead>
-<tr>
-<th>术语名</th>
-<th>缩写</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Java Development Kit (Java开发工具包)</td>
-<td>JDK</td>
-<td>编写Java程序的程序员使用的软件(开发环境)</td>
-</tr>
-<tr>
-<td>Java Runtime Environment (Java运行时环境)</td>
-<td>JRE</td>
-<td>运行Java程序的用户使用的软件(运行环境)</td>
-</tr>
-<tr>
-<td>Sever JRE (服务器JRE)</td>
-<td>—</td>
-<td>在服务器上运行Java程序的软件(服务器上运行环境)</td>
-</tr>
-<tr>
-<td>Standard Edition (标准版)</td>
-<td>SE</td>
-<td>用于桌面或简单服务器应用的Java平台</td>
-</tr>
-<tr>
-<td>Enterprise Edition(企业版)</td>
-<td>EE</td>
-<td>用于复杂服务器应用的Java平台</td>
-</tr>
-<tr>
-<td>Micro Edition (微型版)</td>
-<td>ME</td>
-<td>用于小型嵌入式设备的Java平台</td>
-</tr>
-<tr>
-<td>Java FX</td>
-<td>—</td>
-<td>用于图形化用户界面的一个备选工具包,<br>在Java11之前的某些JavaSE发布版本中提供</td>
-</tr>
-<tr>
-<td>OpenJDK</td>
-<td>—</td>
-<td>Java SE 的一个免费开源实现</td>
-</tr>
-<tr>
-<td>Java2</td>
-<td>J2</td>
-<td>一个过时的术语,用于描述1998~2006年之间的Java版本</td>
-</tr>
-<tr>
-<td>Software Development Kit (软件开发工具包)</td>
-<td>SDK</td>
-<td>一个过时的术语,用于描述1998<del>2006年之间的JDK(1.2</del>1.4)</td>
-</tr>
-<tr>
-<td>Update</td>
-<td>u</td>
-<td>Oracle公司的术语,表示Java8之前的bug修正版本</td>
-</tr>
-<tr>
-<td>NetBeans</td>
-<td>—</td>
-<td>Oracle公司的集成开发环境</td>
-</tr>
-</tbody></table>
-        
-          <a class="article-more-a" href="/assets/mdrepository/Java%E5%B7%A5%E5%85%B7%E5%8C%85&%E7%89%88%E6%9C%AC%E7%9A%84%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-tag tagcloud">
-        <i class="icon-price-tags icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color5">
-                            Java
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-    <div class="article-category tagcloud">
-        <i class="icon-book icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/后端语言//" class="article-tag-list-link color5">
-                            后端语言
-                        </a>
-                    </li>
-                    
-                        
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/后端语言/Java//" class="article-tag-list-link color5">
-                            Java
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/Java%E5%B7%A5%E5%85%B7%E5%8C%85&%E7%89%88%E6%9C%AC%E7%9A%84%E7%9B%B8%E5%85%B3%E6%9C%AF%E8%AF%AD/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Windows下右键新建.md文件教程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/Windows%E4%B8%8B%E5%8F%B3%E9%94%AE%E6%96%B0%E5%BB%BA.md%E6%96%87%E4%BB%B6%E6%95%99%E7%A8%8B/">Windows下右键新建.md文件教程</a>
-    </h1>
-  
-
-        
-        <a href="/assets/mdrepository/Windows%E4%B8%8B%E5%8F%B3%E9%94%AE%E6%96%B0%E5%BB%BA.md%E6%96%87%E4%BB%B6%E6%95%99%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-05-02T16:06:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <p>本文转载自: <a href="https://stepneverstop.github.io/win-rightclick-create-md.html" target="_blank" rel="noopener">Windows下右键新建.md文件教程</a>:<a href="https://stepneverstop.github.io/win-rightclick-create-md.html" target="_blank" rel="noopener">https://stepneverstop.github.io/win-rightclick-create-md.html</a></p>
-<p>原本创建.md文件需要首先打开markdown文本编辑器，如Typora，或者新建.txt文件然后修改后缀名，本文介绍了如何在Windows操作系统中添加右键创建.md文件的方法。</p>
-<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><p>windows10操作系统<br>Typora编辑器</p>
-        
-          <a class="article-more-a" href="/assets/mdrepository/Windows%E4%B8%8B%E5%8F%B3%E9%94%AE%E6%96%B0%E5%BB%BA.md%E6%96%87%E4%BB%B6%E6%95%99%E7%A8%8B/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-tag tagcloud">
-        <i class="icon-price-tags icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color3">
-                            Windows
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-    <div class="article-category tagcloud">
-        <i class="icon-book icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/计算机与操作系统//" class="article-tag-list-link color4">
-                            计算机与操作系统
-                        </a>
-                    </li>
-                    
-                        
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/计算机与操作系统/Windows//" class="article-tag-list-link color3">
-                            Windows
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/Windows%E4%B8%8B%E5%8F%B3%E9%94%AE%E6%96%B0%E5%BB%BA.md%E6%96%87%E4%BB%B6%E6%95%99%E7%A8%8B/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Java开发环境不再需要配置classpath" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/assets/mdrepository/Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8D%E5%86%8D%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AEclasspath/">Java开发环境不再需要配置classpath</a>
-    </h1>
-  
-
-        
-        <a href="/assets/mdrepository/Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8D%E5%86%8D%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AEclasspath/" class="archive-article-date">
-  	<time datetime="2020-05-02T15:27:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      <!--添加tags-->
-      
-      <!---->
-      
-        <p>本文转载自: <a href="https://www.cnblogs.com/ideal-20/p/11050114.html" target="_blank" rel="noopener">Java开发环境不再需要配置classpath！</a><a href="https://www.cnblogs.com/ideal-20/p/11050114.html" target="_blank" rel="noopener">https://www.cnblogs.com/ideal-20/p/11050114.html</a></p>
-<h2 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h2><p>之前发布了关于java开发环境配置的文章，经过与网友的交流，我了解到在jdk1.5以后，java开发环境配置的时候，确实不需要对classpath进行配置，但市面上的书籍，以及一些博客、还是老一套，继续推荐配置classpath，并且关于不需要配置classpath网络上没有什么完整细致，能令人信服的答案，所以我查阅了一些资料以及与别人交流，今天和大家分享一下这些内容。</p>
-        
-          <a class="article-more-a" href="/assets/mdrepository/Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8D%E5%86%8D%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AEclasspath/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-    <div class="article-tag tagcloud">
-        <i class="icon-price-tags icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="javascript:void(0)" class="js-tag article-tag-list-link color5">
-                            Java
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-    <div class="article-category tagcloud">
-        <i class="icon-book icon"></i>
-        <ul class="article-tag-list">
-            
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/后端语言//" class="article-tag-list-link color5">
-                            后端语言
-                        </a>
-                    </li>
-                    
-                        
-                
-                    <li class="article-tag-list-item">
-                        <a href="/categories/后端语言/Java//" class="article-tag-list-link color5">
-                            Java
-                        </a>
-                    </li>
-                    
-                        
-        </ul>
-    </div>
-    
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/assets/mdrepository/Java%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E4%B8%8D%E5%86%8D%E9%9C%80%E8%A6%81%E9%85%8D%E7%BD%AEclasspath/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
+      <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/3/">下一页</a>
     </nav>
   
 
@@ -1527,11 +1393,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
+                <a href="javascript:void(0)" class="js-tag color4">Git</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Git</a>
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1539,11 +1405,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
+                <a href="javascript:void(0)" class="js-tag color5">Java</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">Java</a>
+                <a href="javascript:void(0)" class="js-tag color1">Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1579,11 +1445,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Spring boot</a>
+                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">Spring</a>
+                <a href="javascript:void(0)" class="js-tag color1">Redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Spring boot</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1640,6 +1510,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">慕课网SSM电商网站</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Lombok</a>
               </li>
             
             <div class="clearfix"></div>
