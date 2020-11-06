@@ -15,7 +15,7 @@
     
     
       
-        <title>6.2 修改密码* - HustOJ Admin Docs</title>
+        <title>6.2 修改密码 - HustOJ Admin Docs</title>
       
     
     
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              6.2 修改密码*
+              6.2 修改密码
             
           </span>
         </div>
@@ -386,7 +386,7 @@
 
   <li class="md-nav__item">
     <a href="../admin-deleteUsers/" class="md-nav__link">
-      5. 批量删除用户*
+      5. 批量删除用户
     </a>
   </li>
 
@@ -421,7 +421,7 @@
 
   <li class="md-nav__item">
     <a href="../admin-forgetPassword/" class="md-nav__link">
-      6.1 发送验证邮件*
+      6.1 发送验证邮件
     </a>
   </li>
 
@@ -439,7 +439,7 @@
     
     
     <a href="./" class="md-nav__link md-nav__link--active">
-      6.2 修改密码*
+      6.2 修改密码
     </a>
     
   </li>
@@ -619,9 +619,100 @@
               
                 
                 
-                  <h1>6.2 修改密码*</h1>
+                  <h1>6.2 修改密码</h1>
                 
-                
+                <blockquote>
+<p>方法描述 : </p>
+</blockquote>
+<p>忘记密码时, 根据邮箱中的Token, 重新设置密码</p>
+<p>本方法主要执行以下两个操作 :</p>
+<ol>
+<li>验证Token</li>
+<li>修改密码</li>
+<li>删除Token</li>
+</ol>
+<blockquote>
+<p>请求URL : </p>
+</blockquote>
+<pre><code>$(BASEURL)/admin/forgetResetPassword
+</code></pre>
+<blockquote>
+<p>请求方式 : </p>
+</blockquote>
+<pre><code>POST
+</code></pre>
+<blockquote>
+<p>参数:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>必选</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userID</td>
+<td>是</td>
+<td>String</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>passwordNew</td>
+<td>是</td>
+<td>String</td>
+<td>用户新密码</td>
+</tr>
+<tr>
+<td>forgetToken</td>
+<td>是</td>
+<td>String</td>
+<td>忘记密码Token</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>输入与返回</p>
+</blockquote>
+<p>1 . 密码长度 &lt; 6位</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: 1,
+    &quot;msg&quot;: &quot;密码长度需大于6位&quot;
+}
+</code></pre>
+<p>2 . 用户ID或token错误</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: 1,
+    &quot;msg&quot;: &quot;token错误,请重新获取重置密码的token&quot;
+}
+</code></pre>
+<p>3 . 修改密码时错误</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: 1,
+    &quot;msg&quot;: &quot;修改密码失败&quot;
+}
+</code></pre>
+<p>4 . 修改密码成功</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: 0,
+    &quot;msg&quot;: &quot;修改密码成功&quot;
+}
+</code></pre>
+<blockquote>
+<p>输入示例</p>
+</blockquote>
+<p><img alt="忘记密码-修改密码输入示例.png" src="../assert/%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81-%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81%E8%BE%93%E5%85%A5%E7%A4%BA%E4%BE%8B.png" /></p>
+<blockquote>
+<p>返回示例</p>
+</blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: 0,
+    &quot;msg&quot;: &quot;修改密码成功&quot;
+}
+</code></pre>
                 
               
               
@@ -649,7 +740,7 @@
                 <span class="md-footer-nav__direction">
                   上一页
                 </span>
-                6.1 发送验证邮件*
+                6.1 发送验证邮件
               </div>
             </div>
           </a>
