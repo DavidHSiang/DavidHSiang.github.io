@@ -15,7 +15,7 @@
     
     
       
-        <title>Admin todo - HustOJ Admin Docs</title>
+        <title>9. 根据条件分页查询用户信息 - HustOJ Admin Docs</title>
       
     
     
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Admin todo
+              9. 根据条件分页查询用户信息
             
           </span>
         </div>
@@ -147,14 +147,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../../.." class="md-tabs__link">
         首页
       </a>
     
@@ -170,7 +172,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../common-kaptcha/" class="md-tabs__link">
+        <a href="../common-kaptcha/" class="md-tabs__link md-tabs__link--active">
           HTTP接口
         </a>
       
@@ -249,10 +251,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       HTTP接口
@@ -270,10 +274,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
     
     <label class="md-nav__link" for="nav-2-1">
       用户模块
@@ -501,11 +507,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../admin-users/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       9. 根据条件分页查询用户信息
     </a>
+    
   </li>
 
         
@@ -678,26 +691,26 @@
               
                 
                 
-                  <h1>Admin todo</h1>
+                  <h1>9. 根据条件分页查询用户信息</h1>
                 
                 <blockquote>
 <p>方法描述 : </p>
 </blockquote>
-<p>xxxxxxxxxxxxxxxxxxxxxxxxx</p>
+<p>根据条件分页查询用户信息</p>
 <blockquote>
 <p>请求URL : </p>
 </blockquote>
-<pre><code>$(BASEURL)/xxxxxxxxxxxxxxxxxxx
+<pre><code>$(BASEURL)/admin/users
 </code></pre>
 <blockquote>
 <p>请求方式 : </p>
 </blockquote>
-<pre><code>xxxxx
+<pre><code>POST
 </code></pre>
 <blockquote>
 <p>请求头 : </p>
 </blockquote>
-<pre><code>xxxxx
+<pre><code>Content-Type:application/json
 </code></pre>
 <blockquote>
 <p>参数:</p>
@@ -713,18 +726,359 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>JSON对象</td>
+<td>是</td>
+<td>Object</td>
+<td>用户查询条件<br>若JSON对象中没有任何属性(传入<code>{}</code>), 则分页查询所有用户<br><strong>该参数写在请求体中</strong></td>
+</tr>
+<tr>
+<td>pageNum</td>
+<td>否</td>
+<td>String</td>
+<td>分页第几页 <br>默认: 1<br><strong>该参数写在请求URL中</strong></td>
+</tr>
+<tr>
+<td>pageSize</td>
+<td>否</td>
+<td>String</td>
+<td>每页多少条数据<br>默认: 10<br><strong>该参数写在请求URL中</strong></td>
+</tr>
+<tr>
+<td>navigatePages</td>
+<td>否</td>
+<td>String</td>
+<td>分页条长度<br>默认: 5<br><strong>该参数写在请求URL中</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>JSON对象</strong>:</p>
+<p>JSON对象可具有如下属性 : </p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>必填</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>否</td>
+<td>String</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>userIdPrecise</td>
+<td>否</td>
+<td>Boolean</td>
+<td>是否精准匹配UserID<br>默认: false</td>
+</tr>
+<tr>
+<td>email</td>
+<td>否</td>
+<td>String</td>
+<td>用户邮箱</td>
+</tr>
+<tr>
+<td>emailPrecise</td>
+<td>否</td>
+<td>Boolean</td>
+<td>是否精准匹配用户邮箱<br>默认: false</td>
+</tr>
+<tr>
+<td>nick</td>
+<td>否</td>
+<td>String</td>
+<td>用户昵称</td>
+</tr>
+<tr>
+<td>nickPrecise</td>
+<td>否</td>
+<td>Boolean</td>
+<td>是否精准匹配用户昵称<br>默认: false</td>
+</tr>
+<tr>
+<td>school</td>
+<td>否</td>
+<td>String</td>
+<td>学校</td>
+</tr>
+<tr>
+<td>schoolPrecise</td>
+<td>否</td>
+<td>Boolean</td>
+<td>是否精准匹配学校<br>默认: false</td>
+</tr>
+<tr>
+<td>submitGreater</td>
+<td>否</td>
+<td>Integer</td>
+<td>最小提交数</td>
+</tr>
+<tr>
+<td>submitLess</td>
+<td>否</td>
+<td>Integer</td>
+<td>最大提交数 <br>submitGreater &lt; 提交数 &lt; submitLess</td>
+</tr>
+<tr>
+<td>solvedGreater</td>
+<td>否</td>
+<td>Integer</td>
+<td>最小正确提交数</td>
+</tr>
+<tr>
+<td>solvedLess</td>
+<td>否</td>
+<td>Integer</td>
+<td>最大正确提交数 <br> solvedGreater &lt; 正确提交数 &lt; solvedLess</td>
+</tr>
+<tr>
+<td>defunct</td>
+<td>否</td>
+<td>String</td>
+<td>用户是否可用<br>"Y" : 不可用<br>"N" : 可用</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>输入与返回</p>
+<p>返回参数</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data.total</td>
+<td>Integer</td>
+<td>总记录数</td>
+</tr>
+<tr>
+<td>data.list</td>
+<td>List</td>
+<td>结果匹配的用户列表</td>
+</tr>
+<tr>
+<td>data.pageNum</td>
+<td>Integer</td>
+<td>当前页数</td>
+</tr>
+<tr>
+<td>data.pageSize</td>
+<td>Integer</td>
+<td>每页的数量</td>
+</tr>
+<tr>
+<td>data.size</td>
+<td>Integer</td>
+<td>当前页的数量</td>
+</tr>
+<tr>
+<td>data.startRow</td>
+<td>Integer</td>
+<td>当前页面第一个元素在数据库中的行号</td>
+</tr>
+<tr>
+<td>data.endRow</td>
+<td>Integer</td>
+<td>当前页面最后一个元素在数据库中的行号</td>
+</tr>
+<tr>
+<td>data.pages</td>
+<td>Integer</td>
+<td>总页数</td>
+</tr>
+<tr>
+<td>data.prePage</td>
+<td>Integer</td>
+<td>上一页</td>
+</tr>
+<tr>
+<td>data.nextPage</td>
+<td>Integer</td>
+<td>下一页</td>
+</tr>
+<tr>
+<td>data.isFirstPage</td>
+<td>Boolean</td>
+<td>是否为第一页</td>
+</tr>
+<tr>
+<td>data.isLastPage</td>
+<td>Boolean</td>
+<td>是否为最后一页</td>
+</tr>
+<tr>
+<td>data.hasPreviousPage</td>
+<td>Boolean</td>
+<td>是否有前一页</td>
+</tr>
+<tr>
+<td>data.hasNextPage</td>
+<td>Boolean</td>
+<td>是否有下一页</td>
+</tr>
+<tr>
+<td>data.navigatePages</td>
+<td>Integer</td>
+<td>导航页码数</td>
+</tr>
+<tr>
+<td>data.navigatepageNums</td>
+<td>List</td>
+<td>所有导航页号</td>
+</tr>
+<tr>
+<td>data.navigateFirstPage</td>
+<td>Integer</td>
+<td>导航条上的第一页</td>
+</tr>
+<tr>
+<td>data.navigateLastPage</td>
+<td>Integer</td>
+<td>导航条上的最后一页</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>data.list中用户属性</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data.userID</td>
+<td>String</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>data.email</td>
+<td>String</td>
+<td>用户邮箱</td>
+</tr>
+<tr>
+<td>data.submit</td>
+<td>Number</td>
+<td>用户提交次数</td>
+</tr>
+<tr>
+<td>data.solved</td>
+<td>Number</td>
+<td>提交答案正确次数</td>
+</tr>
+<tr>
+<td>data.defunct</td>
+<td>String</td>
+<td>用户是否可用</td>
+</tr>
+<tr>
+<td>data.ip</td>
+<td>String</td>
+<td>用户注册 ip</td>
+</tr>
+<tr>
+<td>data.accessTime</td>
+<td>String</td>
+<td>上次登录时间</td>
+</tr>
+<tr>
+<td>data.volume</td>
+<td>Number</td>
+<td>页码(表示用户上次看到的第几页)</td>
+</tr>
+<tr>
+<td>data.language</td>
+<td>String</td>
+<td>编程语言</td>
+</tr>
+<tr>
+<td>data.password</td>
+<td>String</td>
+<td>密码(置空)</td>
+</tr>
+<tr>
+<td>data.regTime</td>
+<td>String</td>
+<td>用户注册时间</td>
+</tr>
+<tr>
+<td>data.nick</td>
+<td>String</td>
+<td>昵称</td>
+</tr>
+<tr>
+<td>data.school</td>
+<td>String</td>
+<td>学校</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
 <p>输入示例</p>
+</blockquote>
+<p><img alt="根据条件查询用户输入示例.png" src="../assert/%E6%A0%B9%E6%8D%AE%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E7%A4%BA%E4%BE%8B.png" /></p>
+<pre><code class="language-json">{
+    &quot;userId&quot;:&quot;admin&quot;
+}
+</code></pre>
+<blockquote>
 <p>返回示例</p>
 </blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: 0,
+    &quot;data&quot;: {
+        &quot;total&quot;: 1,
+        &quot;list&quot;: [
+            {
+                &quot;userId&quot;: &quot;admin&quot;,
+                &quot;email&quot;: &quot;123456@163.com&quot;,
+                &quot;submit&quot;: 14,
+                &quot;solved&quot;: 1,
+                &quot;defunct&quot;: &quot;N&quot;,
+                &quot;ip&quot;: &quot;127.0.0.1&quot;,
+                &quot;accessTime&quot;: &quot;2020-11-02T13:54:00.000+00:00&quot;,
+                &quot;volume&quot;: 1,
+                &quot;language&quot;: 1,
+                &quot;password&quot;: &quot;&quot;,
+                &quot;regTime&quot;: &quot;2020-10-26T11:44:33.000+00:00&quot;,
+                &quot;nick&quot;: &quot;admin&quot;,
+                &quot;school&quot;: &quot;XXXXXXXX&quot;
+            }
+        ],
+        &quot;pageNum&quot;: 1,
+        &quot;pageSize&quot;: 10,
+        &quot;size&quot;: 1,
+        &quot;startRow&quot;: 1,
+        &quot;endRow&quot;: 1,
+        &quot;pages&quot;: 1,
+        &quot;prePage&quot;: 0,
+        &quot;nextPage&quot;: 0,
+        &quot;isFirstPage&quot;: true,
+        &quot;isLastPage&quot;: true,
+        &quot;hasPreviousPage&quot;: false,
+        &quot;hasNextPage&quot;: false,
+        &quot;navigatePages&quot;: 5,
+        &quot;navigatepageNums&quot;: [
+            1
+        ],
+        &quot;navigateFirstPage&quot;: 1,
+        &quot;navigateLastPage&quot;: 1
+    }
+}
+</code></pre>
                 
               
               
@@ -739,6 +1093,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../admin-updateUsers/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                8.2 修改多个用户
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../admin-user/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                10. 查询单个用户信息
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

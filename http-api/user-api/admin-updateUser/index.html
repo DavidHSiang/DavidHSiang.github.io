@@ -15,7 +15,7 @@
     
     
       
-        <title>Admin todo - HustOJ Admin Docs</title>
+        <title>8.1 修改单个用户 - HustOJ Admin Docs</title>
       
     
     
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Admin todo
+              8.1 修改单个用户
             
           </span>
         </div>
@@ -147,14 +147,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../../.." class="md-tabs__link">
         首页
       </a>
     
@@ -170,7 +172,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../common-kaptcha/" class="md-tabs__link">
+        <a href="../common-kaptcha/" class="md-tabs__link md-tabs__link--active">
           HTTP接口
         </a>
       
@@ -249,10 +251,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       HTTP接口
@@ -270,10 +274,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
     
     <label class="md-nav__link" for="nav-2-1">
       用户模块
@@ -451,10 +457,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-8" type="checkbox" id="nav-2-1-8">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-8" type="checkbox" id="nav-2-1-8" checked>
     
     <label class="md-nav__link" for="nav-2-1-8">
       8. 修改用户信息
@@ -472,11 +480,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../admin-updateUser/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       8.1 修改单个用户
     </a>
+    
   </li>
 
         
@@ -678,26 +693,26 @@
               
                 
                 
-                  <h1>Admin todo</h1>
+                  <h1>8.1 修改单个用户</h1>
                 
                 <blockquote>
 <p>方法描述 : </p>
 </blockquote>
-<p>xxxxxxxxxxxxxxxxxxxxxxxxx</p>
+<p>修改单个用户信息</p>
 <blockquote>
 <p>请求URL : </p>
 </blockquote>
-<pre><code>$(BASEURL)/xxxxxxxxxxxxxxxxxxx
+<pre><code>$(BASEURL)/admin/updateUser
 </code></pre>
 <blockquote>
 <p>请求方式 : </p>
 </blockquote>
-<pre><code>xxxxx
+<pre><code>POST
 </code></pre>
 <blockquote>
 <p>请求头 : </p>
 </blockquote>
-<pre><code>xxxxx
+<pre><code>Content-Type:application/json
 </code></pre>
 <blockquote>
 <p>参数:</p>
@@ -713,18 +728,116 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>JSON对象</td>
+<td>是</td>
+<td>Object</td>
+<td>用户信息<br><strong>该参数写在请求体中</strong></td>
+</tr>
+<tr>
+<td>defunct</td>
+<td>否</td>
+<td>String</td>
+<td>是否禁用该用户<br>true : 禁用该用户(<strong>默认</strong>)<br>false : 激活该用户<br><strong>该参数写在请求URL中</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>JSON对象</strong>:</p>
+<p>JSON对象需要具有如下属性 : </p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>必填</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>是</td>
+<td>String</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>nick</td>
+<td>否</td>
+<td>String</td>
+<td>用户昵称</td>
+</tr>
+<tr>
+<td>password</td>
+<td>否</td>
+<td>String</td>
+<td>用户密码</td>
+</tr>
+<tr>
+<td>school</td>
+<td>否</td>
+<td>String</td>
+<td>学校</td>
+</tr>
+<tr>
+<td>email</td>
+<td>否</td>
+<td>String</td>
+<td>邮箱</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>输入与返回</p>
+<p>返回数据</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data.successNum</td>
+<td>Number</td>
+<td>更新成功用户数</td>
+</tr>
+<tr>
+<td>data.errorNum</td>
+<td>Number</td>
+<td>更新失败用户数</td>
+</tr>
+<tr>
+<td>data.resultMap</td>
+<td>Object</td>
+<td>key=<code>用户ID</code>, value=<code>是否成功</code>的字典 <br>若更新成功, value = "success"<br>若更新失败, value = "error"</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意</strong>: 若用户密码小于6位、必填属性赋值为空 , 则以更新数据库失败来处理</p>
+<blockquote>
 <p>输入示例</p>
+</blockquote>
+<p><img alt="更新单一用户输入示例.png" src="../assert/%E6%9B%B4%E6%96%B0%E5%8D%95%E4%B8%80%E7%94%A8%E6%88%B7%E8%BE%93%E5%85%A5%E7%A4%BA%E4%BE%8B.png" /></p>
+<pre><code class="language-json">{
+    &quot;userId&quot;:&quot;test001&quot;,
+    &quot;email&quot;:&quot;12345@123.com&quot;
+}
+</code></pre>
+<blockquote>
 <p>返回示例</p>
 </blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: 0,
+    &quot;data&quot;: {
+        &quot;successNum&quot;: 1,
+        &quot;errorNum&quot;: 0,
+        &quot;resultMap&quot;: {
+            &quot;test001&quot;: &quot;success&quot;
+        }
+    }
+}
+</code></pre>
                 
               
               
@@ -739,6 +852,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../admin-resetPassword/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                7. 登录状态修改密码
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../admin-updateUsers/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                8.2 修改多个用户
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

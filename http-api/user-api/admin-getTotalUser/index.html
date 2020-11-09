@@ -15,7 +15,7 @@
     
     
       
-        <title>Admin todo - HustOJ Admin Docs</title>
+        <title>12. 根据条件查询用户总数 - HustOJ Admin Docs</title>
       
     
     
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Admin todo
+              12. 根据条件查询用户总数
             
           </span>
         </div>
@@ -147,14 +147,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../../.." class="md-tabs__link">
         首页
       </a>
     
@@ -170,7 +172,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../common-kaptcha/" class="md-tabs__link">
+        <a href="../common-kaptcha/" class="md-tabs__link md-tabs__link--active">
           HTTP接口
         </a>
       
@@ -249,10 +251,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       HTTP接口
@@ -270,10 +274,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
     
     <label class="md-nav__link" for="nav-2-1">
       用户模块
@@ -537,11 +543,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../admin-getTotalUser/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       12. 根据条件查询用户总数
     </a>
+    
   </li>
 
         
@@ -678,26 +691,26 @@
               
                 
                 
-                  <h1>Admin todo</h1>
+                  <h1>12. 根据条件查询用户总数</h1>
                 
                 <blockquote>
 <p>方法描述 : </p>
 </blockquote>
-<p>xxxxxxxxxxxxxxxxxxxxxxxxx</p>
+<p>根据条件查询用户总数</p>
 <blockquote>
 <p>请求URL : </p>
 </blockquote>
-<pre><code>$(BASEURL)/xxxxxxxxxxxxxxxxxxx
+<pre><code>$(BASEURL)/admin/getTotalUser
 </code></pre>
 <blockquote>
 <p>请求方式 : </p>
 </blockquote>
-<pre><code>xxxxx
+<pre><code>POST
 </code></pre>
 <blockquote>
 <p>请求头 : </p>
 </blockquote>
-<pre><code>xxxxx
+<pre><code>Content-Type:application/json
 </code></pre>
 <blockquote>
 <p>参数:</p>
@@ -713,18 +726,141 @@
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>JSON对象</td>
+<td>是</td>
+<td>Object</td>
+<td>用户查询条件<br>若JSON对象中没有任何属性(传入<code>{}</code>), 则分页查询所有用户<br><strong>该参数写在请求体中</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>JSON对象</strong>:</p>
+<p>JSON对象可具有如下属性 : </p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>必填</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>userId</td>
+<td>否</td>
+<td>String</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>userIdPrecise</td>
+<td>否</td>
+<td>Boolean</td>
+<td>是否精准匹配UserID<br>默认: false</td>
+</tr>
+<tr>
+<td>email</td>
+<td>否</td>
+<td>String</td>
+<td>用户邮箱</td>
+</tr>
+<tr>
+<td>emailPrecise</td>
+<td>否</td>
+<td>Boolean</td>
+<td>是否精准匹配用户邮箱<br>默认: false</td>
+</tr>
+<tr>
+<td>nick</td>
+<td>否</td>
+<td>String</td>
+<td>用户昵称</td>
+</tr>
+<tr>
+<td>nickPrecise</td>
+<td>否</td>
+<td>Boolean</td>
+<td>是否精准匹配用户昵称<br>默认: false</td>
+</tr>
+<tr>
+<td>school</td>
+<td>否</td>
+<td>String</td>
+<td>学校</td>
+</tr>
+<tr>
+<td>schoolPrecise</td>
+<td>否</td>
+<td>Boolean</td>
+<td>是否精准匹配学校<br>默认: false</td>
+</tr>
+<tr>
+<td>submitGreater</td>
+<td>否</td>
+<td>Integer</td>
+<td>最小提交数</td>
+</tr>
+<tr>
+<td>submitLess</td>
+<td>否</td>
+<td>Integer</td>
+<td>最大提交数 <br>submitGreater &lt; 提交数 &lt; submitLess</td>
+</tr>
+<tr>
+<td>solvedGreater</td>
+<td>否</td>
+<td>Integer</td>
+<td>最小正确提交数</td>
+</tr>
+<tr>
+<td>solvedLess</td>
+<td>否</td>
+<td>Integer</td>
+<td>最大正确提交数 <br> solvedGreater &lt; 正确提交数 &lt; solvedLess</td>
+</tr>
+<tr>
+<td>defunct</td>
+<td>否</td>
+<td>String</td>
+<td>用户是否可用<br>"Y" : 不可用<br>"N" : 可用</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>输入与返回</p>
+<p>返回参数</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data.count</td>
+<td>Number</td>
+<td>符合条件的总记录数</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
 <p>输入示例</p>
+</blockquote>
+<p><img alt="根据条件查询用户总数输入示例.png" src="../assert/%E6%A0%B9%E6%8D%AE%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E6%80%BB%E6%95%B0%E8%BE%93%E5%85%A5%E7%A4%BA%E4%BE%8B.png" /></p>
+<pre><code class="language-json">{
+}
+</code></pre>
+<blockquote>
 <p>返回示例</p>
 </blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: 0,
+    &quot;data&quot;: {
+        &quot;count&quot;: 87
+    }
+}
+</code></pre>
                 
               
               
@@ -739,6 +875,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../admin-currentUser/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                11. 查询当前用户信息
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../problem-api/todo/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                题库模块
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

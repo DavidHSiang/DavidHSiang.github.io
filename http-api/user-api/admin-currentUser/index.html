@@ -15,7 +15,7 @@
     
     
       
-        <title>Admin todo - HustOJ Admin Docs</title>
+        <title>11. 查询当前用户信息 - HustOJ Admin Docs</title>
       
     
     
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Admin todo
+              11. 查询当前用户信息
             
           </span>
         </div>
@@ -147,14 +147,16 @@
         
           
 
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
   <li class="md-tabs__item">
     
-      <a href="../../.." class="md-tabs__link md-tabs__link--active">
+      <a href="../../.." class="md-tabs__link">
         首页
       </a>
     
@@ -170,7 +172,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../common-kaptcha/" class="md-tabs__link">
+        <a href="../common-kaptcha/" class="md-tabs__link md-tabs__link--active">
           HTTP接口
         </a>
       
@@ -249,10 +251,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
     
     <label class="md-nav__link" for="nav-2">
       HTTP接口
@@ -270,10 +274,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1" checked>
     
     <label class="md-nav__link" for="nav-2-1">
       用户模块
@@ -525,11 +531,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../admin-currentUser/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       11. 查询当前用户信息
     </a>
+    
   </li>
 
         
@@ -678,53 +691,163 @@
               
                 
                 
-                  <h1>Admin todo</h1>
+                  <h1>11. 查询当前用户信息</h1>
                 
                 <blockquote>
 <p>方法描述 : </p>
 </blockquote>
-<p>xxxxxxxxxxxxxxxxxxxxxxxxx</p>
+<p>得到当前用户的信息</p>
 <blockquote>
 <p>请求URL : </p>
 </blockquote>
-<pre><code>$(BASEURL)/xxxxxxxxxxxxxxxxxxx
+<pre><code>$(BASEURL)/admin/currentUser
 </code></pre>
 <blockquote>
 <p>请求方式 : </p>
 </blockquote>
-<pre><code>xxxxx
+<pre><code>GET
 </code></pre>
 <blockquote>
-<p>请求头 : </p>
-</blockquote>
-<pre><code>xxxxx
-</code></pre>
-<blockquote>
-<p>参数:</p>
+<p>查询成功返回数据</p>
 </blockquote>
 <table>
 <thead>
 <tr>
-<th>参数</th>
-<th>必选</th>
+<th>属性</th>
 <th>类型</th>
 <th>说明</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
+<td>data.userID</td>
+<td>String</td>
+<td>用户ID</td>
+</tr>
+<tr>
+<td>data.email</td>
+<td>String</td>
+<td>用户邮箱</td>
+</tr>
+<tr>
+<td>data.submit</td>
+<td>Number</td>
+<td>用户提交次数</td>
+</tr>
+<tr>
+<td>data.solved</td>
+<td>Number</td>
+<td>提交答案正确次数</td>
+</tr>
+<tr>
+<td>data.defunct</td>
+<td>String</td>
+<td>用户是否可用</td>
+</tr>
+<tr>
+<td>data.ip</td>
+<td>String</td>
+<td>用户注册 ip</td>
+</tr>
+<tr>
+<td>data.accessTime</td>
+<td>String</td>
+<td>上次登录时间</td>
+</tr>
+<tr>
+<td>data.volume</td>
+<td>Number</td>
+<td>页码(表示用户上次看到的第几页)</td>
+</tr>
+<tr>
+<td>data.language</td>
+<td>String</td>
+<td>编程语言</td>
+</tr>
+<tr>
+<td>data.password</td>
+<td>String</td>
+<td>密码(置空)</td>
+</tr>
+<tr>
+<td>data.regTime</td>
+<td>String</td>
+<td>用户注册时间</td>
+</tr>
+<tr>
+<td>data.nick</td>
+<td>String</td>
+<td>昵称</td>
+</tr>
+<tr>
+<td>data.school</td>
+<td>String</td>
+<td>学校</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
 <p>输入与返回</p>
+</blockquote>
+<p>1 . 用户未登录</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: 1,
+    &quot;msg&quot;: &quot;用户未登录&quot;
+}
+</code></pre>
+<p>2 . 用户已登录, 但数据库中无此用户</p>
+<p>(有可能会出现在, 用户登录后通过用户管理删除当前用户的情况)</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: 1,
+    &quot;msg&quot;: &quot;该用户不存在&quot;
+}
+</code></pre>
+<p>3 . 用户已登录, 查询成功</p>
+<pre><code class="language-json">{
+    &quot;status&quot;: 0,
+    &quot;data&quot;: {
+        &quot;userID&quot;: &quot;admin&quot;,
+        &quot;email&quot;: &quot;admin@163.com&quot;,
+        &quot;submit&quot;: 14,
+        &quot;solved&quot;: 1,
+        &quot;defunct&quot;: &quot;N&quot;,
+        &quot;ip&quot;: &quot;127.0.0.1&quot;,
+        &quot;accessTime&quot;: &quot;2020-11-02T13:54:00.000+00:00&quot;,
+        &quot;volume&quot;: 1,
+        &quot;language&quot;: &quot;Python&quot;,
+        &quot;password&quot;: &quot;&quot;,
+        &quot;regTime&quot;: &quot;2020-10-26T11:44:33.000+00:00&quot;,
+        &quot;nick&quot;: &quot;admin&quot;,
+        &quot;school&quot;: &quot;XXXXXXXXXXX&quot;
+    }
+}
+</code></pre>
+<blockquote>
 <p>输入示例</p>
+</blockquote>
+<p><img alt="获得当前用户信息输入示例.png" src="../assert/%E8%8E%B7%E5%BE%97%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF%E8%BE%93%E5%85%A5%E7%A4%BA%E4%BE%8B.png" /></p>
+<blockquote>
 <p>返回示例</p>
 </blockquote>
+<pre><code class="language-json">{
+    &quot;status&quot;: 0,
+    &quot;data&quot;: {
+        &quot;userID&quot;: &quot;admin&quot;,
+        &quot;email&quot;: &quot;admin@163.com&quot;,
+        &quot;submit&quot;: 14,
+        &quot;solved&quot;: 1,
+        &quot;defunct&quot;: &quot;N&quot;,
+        &quot;ip&quot;: &quot;127.0.0.1&quot;,
+        &quot;accessTime&quot;: &quot;2020-11-02T13:54:00.000+00:00&quot;,
+        &quot;volume&quot;: 1,
+        &quot;language&quot;: &quot;Python&quot;,
+        &quot;password&quot;: &quot;&quot;,
+        &quot;regTime&quot;: &quot;2020-10-26T11:44:33.000+00:00&quot;,
+        &quot;nick&quot;: &quot;admin&quot;,
+        &quot;school&quot;: &quot;XXXXXXXXXXX&quot;
+    }
+}
+</code></pre>
                 
               
               
@@ -739,6 +862,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../admin-user/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                10. 查询单个用户信息
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../admin-getTotalUser/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                12. 根据条件查询用户总数
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
